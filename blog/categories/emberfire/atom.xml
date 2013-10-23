@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: EmberFire | honjo2のブログ]]></title>
+  <link href="http://honjo2.github.io/blog/categories/emberfire/atom.xml" rel="self"/>
+  <link href="http://honjo2.github.io/"/>
+  <updated>2013-10-23T16:11:40+09:00</updated>
+  <id>http://honjo2.github.io/</id>
+  <author>
+    <name><![CDATA[honjo2]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[EmberFireが出た]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/23/emberfire/"/>
+    <updated>2013-10-23T13:09:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/23/emberfire</id>
+    <content type="html"><![CDATA[<h1>EmberFireとは</h1>
+
+<ul>
+<li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
+<li><a href="https://www.firebase.com/blog/2013-10-22-firebase-bindings-for-ember.html">Announcing Firebase Bindings for EmberJS</a></li>
+</ul>
+
+
+<h1>サンプルを動かす</h1>
+
+<ol>
+<li><code>git clone https://github.com/firebase/emberFire.git</code></li>
+<li><code>cd emberFire</code></li>
+<li><p><code>open examples/chat/index.html</code></p>
+
+<p> <img src="/images/2013-10-23/emberfirechat.png" alt="" /></p></li>
+</ol>
+
+
+<h1>ソース</h1>
+
+<p>```html index.html
+&lt;!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EmberFire Test chat</title>
+  <link rel="stylesheet" type="text/css" href="https://www.firebase.com/css/example.css">
+  <style></p>
+
+<pre><code>button {
+  width: 15%;
+  font-size: 24px;
+}
+#nameInput {
+  width: 20%;
+}
+#messageInput {
+  width: 60%;
+}
+</code></pre>
+
+<p>  </style>
+</head>
+<body></p>
+
+<p>  <script type="text/x-handlebars"></p>
+
+<pre><code>&lt;h2&gt;EmberFire Chat&lt;/h2&gt;
+｛｛outlet｝｝
+</code></pre>
+
+<p>  </script></p>
+
+<p>  <!-- データを全て表示 -->
+  <script type="text/x-handlebars" data-template-name="index"></p>
+
+<pre><code>｛｛#scrolling-div id="messagesDiv" update-when=this｝｝
+  ｛｛#each｝｝
+    &lt;div&gt;&lt;em&gt;｛｛from｝｝&lt;/em&gt;: ｛｛msg｝｝&lt;/div&gt;
+  ｛｛/each｝｝
+｛｛/scrolling-div｝｝
+&lt;form ｛｛action "sendMessage" on="submit"｝｝&gt;
+  ｛｛input id="nameInput" value=from placeholder="Name"｝｝
+  ｛｛input id="messageInput" value=msg placeholder="Message..."｝｝
+  &lt;button type=submit&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>  </script></p>
+
+<p>  <script type="text/x-handlebars" id="components/scrolling-div"></p>
+
+<pre><code>｛｛yield｝｝
+</code></pre>
+
+<p>  </script></p>
+
+<p>  <!-- FireEmberに必要なjs -->
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js"></script>
+  <!--<script src="http://builds.emberjs.com/tags/v1.0.0/ember.js"></script>&mdash;>
+  <script src="http://builds.emberjs.com/ember-latest.js"></script>
+  <script src="../../emberfire-latest.js"></script></p>
+
+<p>  <!-- このアプリ用のjs -->
+  <script src="app.js"></script>
+</body>
+</html>
+```</p>
+
+<p>```javascript app.js
+App = Ember.Application.create();</p>
+
+<p>// 使用するFirebaseを指定
+App.IndexRoute = Ember.Route.extend({
+  model: function() {</p>
+
+<pre><code>return EmberFire.Array.create({
+  ref: new Firebase("https://ember-chat.firebaseio-demo.com/")
+});
+</code></pre>
+
+<p>  }
+});</p>
+
+<p>// データを保存
+App.IndexController = Ember.ArrayController.extend({
+  msg: &ldquo;&rdquo;,
+  from: &ldquo;Guest&rdquo; + Math.floor(Math.random() * 100),
+  actions: {</p>
+
+<pre><code>sendMessage: function() {
+  this.pushObject({from: this.get("from"), msg: this.get("msg")});
+  this.set("msg", null);
+}
+</code></pre>
+
+<p>  }
+});</p>
+
+<p>// HTMLを見やすく
+App.ScrollingDivComponent = Ember.Component.extend({
+  scheduleScrollIntoView: function() {</p>
+
+<pre><code>// Only run once per tick, once rendering has completed;
+// avoid flood of scrolls when many updates happen at once
+Ember.run.scheduleOnce("afterRender", this, "scrollIntoView");
+</code></pre>
+
+<p>  }.observes(&ldquo;update-when.@each&rdquo;),</p>
+
+<p>  scrollIntoView: function() {</p>
+
+<pre><code>this.$().scrollTop(this.$().prop("scrollHeight"));
+</code></pre>
+
+<p>  }
+});
+```</p>
+
+<h1>データ</h1>
+
+<ul>
+<li><p>データはこんな感じで保存されています</p>
+
+<p>  <img src="/images/2013-10-23/firebasedata.png" alt="" /></p></li>
+<li><p>ちなみにこれはデモ用のデータベースなので誰でも見ることができます</p>
+
+<ul>
+<li><a href="https://ember-chat.firebaseio-demo.com/">https://ember-chat.firebaseio-demo.com/</a></li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
