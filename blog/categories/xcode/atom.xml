@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Xcode | honjo2のブログ]]></title>
+  <link href="http://honjo2.github.io/blog/categories/xcode/atom.xml" rel="self"/>
+  <link href="http://honjo2.github.io/"/>
+  <updated>2013-10-24T21:19:47+09:00</updated>
+  <id>http://honjo2.github.io/</id>
+  <author>
+    <name><![CDATA[honjo2]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[XcodeでTomorrowテーマを設定する]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/24/tomorrow/"/>
+    <updated>2013-10-24T15:09:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/24/tomorrow</id>
+    <content type="html"><![CDATA[<p>Tomorrowテーマはプログラムを書く時に最適なテーマですが、ここではXcodeでTomorrow Nightを設定する方法を書きます。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><code>git clone https://github.com/chriskempson/tomorrow-theme.git</code></li>
+<li><code>cd tomorrow-theme</code></li>
+<li><code>cp -i Xcode\ 4/Tomorrow\ Night.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes</code></li>
+<li>Xcodeを起動（再起動）しPreferencesのFonts &amp; Colorsタブを開く</li>
+<li>Tomorrow Nightを選択する</li>
+</ol>
+
+
+<p><img src="/images/2013-10-24/tomorrownight.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -75,13 +75,6 @@
                 
             </ul>
             
-                <form class="search navbar-form navbar-right" action="http://google.com/search" method="GET">
-                    <input type="hidden" name="q" value="site:honjo2.github.io">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="q" placeholder="Search">
-                    </div>
-                </form>
-            
         </div>
     </div>
 </nav>
@@ -94,6 +87,59 @@
   <div class="page-content col-md-9">
     <div class="blog-index">
       
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-24T15:09:00+09:00" pubdate data-updated="true">Oct 24<span>th</span>, 2013</time>
+        
+           | <a href="/blog/2013/10/24/tomorrow/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2013/10/24/tomorrow/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/24/tomorrow/">XcodeでTomorrowテーマを設定する</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Tomorrowテーマはプログラムを書く時に最適なテーマですが、ここではXcodeでTomorrow Nightを設定する方法を書きます。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><code>git clone https://github.com/chriskempson/tomorrow-theme.git</code></li>
+<li><code>cd tomorrow-theme</code></li>
+<li><code>cp -i Xcode\ 4/Tomorrow\ Night.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes</code></li>
+<li>Xcodeを起動（再起動）しPreferencesのFonts &amp; Colorsタブを開く</li>
+<li>Tomorrow Nightを選択する</li>
+</ol>
+
+
+<p><img src="/images/2013-10-24/tomorrownight.png" alt="" /></p>
+</div>
+  
+  
+
+
+        </article>
       
       
         <article class="post">
@@ -127,7 +173,7 @@
   </header>
 
 
-  <div class="entry-content clearfix"><h1>EmberFireとは</h1>
+  <div class="entry-content clearfix"><h1>EmberFireとは？</h1>
 
 <ul>
 <li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
@@ -375,30 +421,48 @@
   
     <aside class="sidebar col-md-3">
       
-        <section class="panel panel-default">
+        
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">About</h3>
+  </div>
+  <div style="display: table-cell">
+    <img src="http://www.gravatar.com/avatar/49456ce82169d89b5d4497324c4dcabd" alt="Gravatar of honjo2 " title="Gravatar of honjo2" />
+  </div>
+  <div style="display: table-cell; width: 100%; vertical-align: middle;">
+    <div style="margin-left: 5px; margin-right: 5px;">
+    本城 博昭<br />
+    大磯町出身 品川在住<br />
+    ソフトウェアエンジニア
+    </div>
+  </div>
+
+</section>
+
+<section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Recent Posts</h3>
   </div>
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2013/10/24/tomorrow/">XcodeでTomorrowテーマを設定する</a>
+    
     <a class="list-group-item " href="/blog/2013/10/23/emberfire/">EmberFireが出た</a>
     
   </div>
+</section>
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Category Cloud</h3>
+  </div>
+  <span id="tag-cloud"><a href='/blog/categories/emberfire' style='font-size: 160.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 160.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 160.0%'>Firebase(1)</a> <a href='/blog/categories/xcode' style='font-size: 160.0%'>Xcode(1)</a> </span>
 </section>
 
 <a class="twitter-timeline" href="https://twitter.com/honjo2" data-widget-id="392860723291754496">@honjo2 からのツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<section>
-  <h1>Categories</h1>
-  <ul id="categories">
-    <li class='category'><a href='/blog/categories/emberfire/'>EmberFire (1)</a></li>
-<li class='category'><a href='/blog/categories/emberjs/'>EmberJS (1)</a></li>
-<li class='category'><a href='/blog/categories/firebase/'>Firebase (1)</a></li>
 
-  </ul>
-</section>
 
 
 

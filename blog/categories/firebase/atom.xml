@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Firebase | honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/blog/categories/firebase/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-10-23T23:30:59+09:00</updated>
+  <updated>2013-10-24T21:19:47+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -18,7 +18,7 @@
     <link href="http://honjo2.github.io/blog/2013/10/23/emberfire/"/>
     <updated>2013-10-23T13:09:00+09:00</updated>
     <id>http://honjo2.github.io/blog/2013/10/23/emberfire</id>
-    <content type="html"><![CDATA[<h1>EmberFireとは</h1>
+    <content type="html"><![CDATA[<h1>EmberFireとは？</h1>
 
 <ul>
 <li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
