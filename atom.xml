@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-10-24T11:44:55+09:00</updated>
+  <updated>2013-10-25T08:30:11+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -14,11 +14,33 @@
 
   
   <entry>
+    <title type="html"><![CDATA[XcodeでTomorrowテーマを設定する]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/24/tomorrow/"/>
+    <updated>2013-10-24T15:09:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/24/tomorrow</id>
+    <content type="html"><![CDATA[<p>Tomorrowテーマはプログラムを書く時に最適なテーマですが、ここではXcodeでTomorrow Nightを設定する方法を書きます。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><code>git clone https://github.com/chriskempson/tomorrow-theme.git</code></li>
+<li><code>cd tomorrow-theme</code></li>
+<li><code>cp -i Xcode\ 4/Tomorrow\ Night.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes</code></li>
+<li>Xcodeを起動（再起動）しPreferencesのFonts &amp; Colorsタブを開く</li>
+<li>Tomorrow Nightを選択する</li>
+</ol>
+
+
+<p><img src="http://honjo2.github.io/images/2013-10-24/tomorrownight.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[EmberFireが出た]]></title>
     <link href="http://honjo2.github.io/blog/2013/10/23/emberfire/"/>
     <updated>2013-10-23T13:09:00+09:00</updated>
     <id>http://honjo2.github.io/blog/2013/10/23/emberfire</id>
-    <content type="html"><![CDATA[<h1>EmberFireとは</h1>
+    <content type="html"><![CDATA[<h1>EmberFireとは？</h1>
 
 <ul>
 <li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
