@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-10-25T22:43:34+09:00</updated>
+  <updated>2013-10-25T23:18:42+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[キーマカレーのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/25/keemacurry/"/>
+    <updated>2013-10-25T23:01:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/25/keemacurry</id>
+    <content type="html"><![CDATA[<p>今日脳内で考えたレシピでキーマカレーを作りました。当然すんなりはできず、色々微調整してなかなか美味しいキーマカレーができました。その修正版レシピを書きます。</p>
+
+<p><img src="http://honjo2.github.io/images/2013-10-25/keemacurry.jpg" alt="" /></p>
+
+<div><script src='https://gist.github.com/7149667.js'></script>
+<noscript><pre><code># キーマカレー
+- 2人分
+
+# 材料
+- サラダ油 80cc ...1
+- 玉ねぎ 中2個 ...1
+- にんにく 2かけ ...1
+- しょうが 10g ...1
+- クミン 小さじ1 ...2
+- ターメリック 小さじ1 ...2
+- コリアンダー 小さじ1 ...2
+- パプリカ 小さじ1 ...2
+- ガラムマサラ 小さじ1 ...2
+- チリーペッパー 小さじ1 ...2
+- 合挽き肉 500g ...2
+- ホールトマト 1缶 ...3
+- プレーンヨーグルト 100g ...3
+- 生クリーム 150ml ...3
+- 砂糖 小さじ1 ...3
+- 塩 小さじ1 ...3
+- 塩 少々 ...4
+- こしょう 少々 ...4
+- パクチー 1束 ...5
+
+# 手順
+1. 鍋にサラダ油、みじん切りにした玉ねぎ、にんにく、しょうがを入れきつね色になるまで炒める
+2. スパイス、合挽き肉を加え軽く炒める
+3. ホールトマト、プレーンヨーグルト、生クリーム、砂糖、塩を加え蓋をせずに中火で時々かき混ぜながら15分煮込む
+4. 塩、こしょうで味を整える
+5. お皿に盛りつけ、パクチーを添えて完成</code></pre></noscript></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iPhoneのホーム画面晒します]]></title>
@@ -46,7 +90,7 @@
 <h2>時計</h2>
 
 <ul>
-<li>アラームと料理の時にストップウォッチを使います</li>
+<li>目覚まし時計と料理の時にストップウォッチを使います</li>
 </ul>
 
 
