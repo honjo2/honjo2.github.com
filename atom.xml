@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-10-25T23:18:42+09:00</updated>
+  <updated>2013-10-31T00:34:54+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/31/gsi/"/>
+    <updated>2013-10-31T00:20:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/31/gsi</id>
+    <content type="html"><![CDATA[<p><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>が正式公開されました。右上のコンパスを叩くと距離を測ることができるじゃないですか。これは便利です。Googleマップやマピオンで使いたいところです。そこで地図を変更するブックマークレットを作りました。とりあえず自由に使えるOpenStreetMap版のブックマークレットを公開します。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>にアクセス</li>
+<li>以下のブックマークレットをアドレスバーに貼り付ける</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>ブックマークレット</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">javascript</span><span class="o">:</span><span class="kd">var</span> <span class="nx">layer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Layer</span><span class="p">.</span><span class="nx">XYZ</span><span class="p">(</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openstreetmap.org/${z}/${x}/${y}.png&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">attribution</span><span class="o">:</span> <span class="s2">&quot;Map data © OpenStreetMap contributors, CC BY-SA&quot;</span> <span class="p">});</span> <span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">layer</span><span class="p">);</span> <span class="nx">map</span><span class="p">.</span><span class="nx">setBaseLayer</span><span class="p">(</span><span class="nx">layer</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[キーマカレーのレシピ]]></title>
