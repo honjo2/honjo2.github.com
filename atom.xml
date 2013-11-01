@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-10-25T08:40:19+09:00</updated>
+  <updated>2013-11-01T12:32:57+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,254 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[毎日欠かさずチェックする「する／しない」リスト]]></title>
+    <link href="http://honjo2.github.io/blog/2013/11/01/do/"/>
+    <updated>2013-11-01T12:03:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/11/01/do</id>
+    <content type="html"><![CDATA[<p><a href="http://www.lifehacker.jp/2013/10/131031jack_dorsey.html">Twitter創業者ジャック・ドーシーが毎日欠かさずチェックする「する／しない」リスト</a></p>
+
+<p>この記事を見て僕もいつも心がけてることをまとめてみました。</p>
+
+<div><script src='https://gist.github.com/7260449.js'></script>
+<noscript><pre><code># する
+- ITの最新情報を見る
+- 水を一日2㍑飲む
+- 毎日青汁を飲む
+- ランニングをする
+- 自転車に乗る
+- 体幹トレーニングをする
+- ジムでマシンをする
+- 失敗を恐れない
+
+# しない
+- 寝る3時間以内にものを食べない
+- ジャンクフードを食べない
+- 甘い清涼飲料を飲まない
+- 間食しない
+- 夜更かししない
+- 他人を睨まない</code></pre></noscript></div>
+
+
+<p>体のことばかりですね。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/31/gsi/"/>
+    <updated>2013-10-31T00:20:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/31/gsi</id>
+    <content type="html"><![CDATA[<p><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>が正式公開されました。右上のコンパスを叩くと距離を測ることができるじゃないですか。これは便利です。Googleマップやマピオンで使いたいところです。そこで地図を変更するブックマークレットを作りました。とりあえず自由に使えるOpenStreetMap版のブックマークレットを公開します。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>にアクセス</li>
+<li>以下のブックマークレットをアドレスバーに貼り付ける</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>ブックマークレット</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">javascript</span><span class="o">:</span><span class="kd">var</span> <span class="nx">layer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OpenLayers</span><span class="p">.</span><span class="nx">Layer</span><span class="p">.</span><span class="nx">XYZ</span><span class="p">(</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">,</span> <span class="s2">&quot;http://tile.openstreetmap.org/${z}/${x}/${y}.png&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">attribution</span><span class="o">:</span> <span class="s2">&quot;Map data © OpenStreetMap contributors, CC BY-SA&quot;</span> <span class="p">});</span> <span class="nx">map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">layer</span><span class="p">);</span> <span class="nx">map</span><span class="p">.</span><span class="nx">setBaseLayer</span><span class="p">(</span><span class="nx">layer</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[キーマカレーのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/25/keemacurry/"/>
+    <updated>2013-10-25T23:01:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/25/keemacurry</id>
+    <content type="html"><![CDATA[<p>今日脳内で考えたレシピでキーマカレーを作りました。当然すんなりはできず、色々微調整してなかなか美味しいキーマカレーができました。その修正版レシピを書きます。</p>
+
+<p><img src="http://honjo2.github.io/images/2013-10-25/keemacurry.jpg" alt="" /></p>
+
+<div><script src='https://gist.github.com/7149667.js'></script>
+<noscript><pre><code># キーマカレー
+- 2人分
+
+# 材料
+- サラダ油 80cc ...1
+- 玉ねぎ 中2個 ...1
+- にんにく 2かけ ...1
+- しょうが 10g ...1
+- クミン 小さじ1 ...2
+- ターメリック 小さじ1 ...2
+- コリアンダー 小さじ1 ...2
+- パプリカ 小さじ1 ...2
+- ガラムマサラ 小さじ1 ...2
+- チリーペッパー 小さじ1 ...2
+- 合挽き肉 500g ...2
+- ホールトマト 1缶 ...3
+- プレーンヨーグルト 100g ...3
+- 生クリーム 150ml ...3
+- 砂糖 小さじ1 ...3
+- 塩 小さじ1 ...3
+- 塩 少々 ...4
+- こしょう 少々 ...4
+- パクチー 1束 ...5
+
+# 手順
+1. 鍋にサラダ油、みじん切りにした玉ねぎ、にんにく、しょうがを入れきつね色になるまで炒める
+2. スパイス、合挽き肉を加え軽く炒める
+3. ホールトマト、プレーンヨーグルト、生クリーム、砂糖、塩を加え蓋をせずに中火で時々かき混ぜながら15分煮込む
+4. 塩、こしょうで味を整える
+5. お皿に盛りつけ、パクチーを添えて完成</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iPhoneのホーム画面晒します]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/25/iphonehome/"/>
+    <updated>2013-10-25T22:13:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/25/iphonehome</id>
+    <content type="html"><![CDATA[<p><img src="http://honjo2.github.io/images/2013-10-25/iphonehome.png" alt="" /></p>
+
+<h1>1段目</h1>
+
+<h2>設定</h2>
+
+<ul>
+<li>必須ですよね</li>
+</ul>
+
+
+<h2>App Store</h2>
+
+<ul>
+<li>必須ですよね</li>
+</ul>
+
+
+<h2>カレンダー</h2>
+
+<ul>
+<li>イベントを登録しています</li>
+</ul>
+
+
+<h2>時計</h2>
+
+<ul>
+<li>目覚まし時計と料理の時にストップウォッチを使います</li>
+</ul>
+
+
+<h1>2段目</h1>
+
+<h2>電話</h2>
+
+<ul>
+<li>必須ですよね</li>
+</ul>
+
+
+<h2>メモ</h2>
+
+<ul>
+<li>メモしてます</li>
+</ul>
+
+
+<h2>リマインダー</h2>
+
+<ul>
+<li>したいことや行きたいところなどを登録しています</li>
+</ul>
+
+
+<h2>Safari</h2>
+
+<ul>
+<li>あまりWebはしませんがなんとなく</li>
+</ul>
+
+
+<h1>3段目</h1>
+
+<h2>写真</h2>
+
+<ul>
+<li>写真を確認します</li>
+</ul>
+
+
+<h2>アメッシュ</h2>
+
+<ul>
+<li>移動はランor自転車のみの僕は必須です</li>
+</ul>
+
+
+<h2>Instagram</h2>
+
+<ul>
+<li>ハマってます</li>
+</ul>
+
+
+<h2>Vine</h2>
+
+<ul>
+<li>Instagramでも動画は取れますが、僕はこっち派です</li>
+</ul>
+
+
+<h1>4段目</h1>
+
+<h2>Tweetbot</h2>
+
+<ul>
+<li>よくつぶやきます</li>
+</ul>
+
+
+<h2>2chまとめ</h2>
+
+<ul>
+<li>面白いです</li>
+</ul>
+
+
+<h1>ドック</h1>
+
+<h2>マップJapan</h2>
+
+<ul>
+<li>自家製アプリです。僕はランや自転車であてどもなくうろつくのが趣味なので全画面地図で現在地を確認できる軽いアプリがあればいいんです。これはそれ以外の機能もありますが、それはRejectを防ぐためのものです。本当はもっとシンプルにしたかった。あまりにシンプルだとアップルさんに「それってWebアプリでいいじゃん？」って言われてしまうのです。</li>
+</ul>
+
+
+<h2>カメラ</h2>
+
+<ul>
+<li>いろいろ撮ります</li>
+</ul>
+
+
+<h2>メール</h2>
+
+<ul>
+<li>必須ですよね</li>
+</ul>
+
+
+<h2>LINE</h2>
+
+<ul>
+<li>ヤングですから</li>
+</ul>
+
+
+<hr />
+
+<p>ちなみに2ページ目はプリインアプリや開発中のアプリや会社のアプリが置かれてます。日常的に使うのは1ページ目のアプリだけです。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[XcodeでTomorrowテーマを設定する]]></title>

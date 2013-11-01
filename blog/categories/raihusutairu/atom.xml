@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ライフスタイル | honjo2のブログ]]></title>
+  <link href="http://honjo2.github.io/blog/categories/raihusutairu/atom.xml" rel="self"/>
+  <link href="http://honjo2.github.io/"/>
+  <updated>2013-11-01T12:32:57+09:00</updated>
+  <id>http://honjo2.github.io/</id>
+  <author>
+    <name><![CDATA[honjo2]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[毎日欠かさずチェックする「する／しない」リスト]]></title>
+    <link href="http://honjo2.github.io/blog/2013/11/01/do/"/>
+    <updated>2013-11-01T12:03:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/11/01/do</id>
+    <content type="html"><![CDATA[<p><a href="http://www.lifehacker.jp/2013/10/131031jack_dorsey.html">Twitter創業者ジャック・ドーシーが毎日欠かさずチェックする「する／しない」リスト</a></p>
+
+<p>この記事を見て僕もいつも心がけてることをまとめてみました。</p>
+
+<p><div><script src='https://gist.github.com/7260449.js'></script>
+<noscript><pre><code># する
+- ITの最新情報を見る
+- 水を一日2㍑飲む
+- 毎日青汁を飲む
+- ランニングをする
+- 自転車に乗る
+- 体幹トレーニングをする
+- ジムでマシンをする
+- 失敗を恐れない
+
+# しない
+- 寝る3時間以内にものを食べない
+- ジャンクフードを食べない
+- 甘い清涼飲料を飲まない
+- 間食しない
+- 夜更かししない
+- 他人を睨まない</code></pre></noscript></div>
+</p>
+
+<p>体のことばかりですね。</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 地理院地図 | honjo2のブログ]]></title>
+  <link href="http://honjo2.github.io/blog/categories/di-li-yuan-di-tu/atom.xml" rel="self"/>
+  <link href="http://honjo2.github.io/"/>
+  <updated>2013-11-01T12:32:57+09:00</updated>
+  <id>http://honjo2.github.io/</id>
+  <author>
+    <name><![CDATA[honjo2]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました]]></title>
+    <link href="http://honjo2.github.io/blog/2013/10/31/gsi/"/>
+    <updated>2013-10-31T00:20:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/10/31/gsi</id>
+    <content type="html"><![CDATA[<p><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>が正式公開されました。右上のコンパスを叩くと距離を測ることができるじゃないですか。これは便利です。Googleマップやマピオンで使いたいところです。そこで地図を変更するブックマークレットを作りました。とりあえず自由に使えるOpenStreetMap版のブックマークレットを公開します。</p>
+
+<h1>手順</h1>
+
+<ol>
+<li><a href="http://portal.cyberjapan.jp/site/mapuse4/">地理院地図</a>にアクセス</li>
+<li>以下のブックマークレットをアドレスバーに貼り付ける</li>
+</ol>
+
+
+<p><code>javascript ブックマークレット
+javascript:var layer = new OpenLayers.Layer.XYZ("OpenStreetMap", "http://tile.openstreetmap.org/${z}/${x}/${y}.png", { attribution: "Map data © OpenStreetMap contributors, CC BY-SA" }); map.addLayer(layer); map.setBaseLayer(layer);
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
