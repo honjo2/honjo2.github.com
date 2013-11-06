@@ -107,6 +107,83 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-06T21:00:00+09:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
+        
+           | <a href="/blog/2013/11/06/log/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2013/11/06/log/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Androidでログを出力するには<code>Log.d("MainActivity", "ログ");</code>という風に書くと思います。第一引数はタグですがここはクラス名とかを書いておいて第二引数にログを書く感じだと思います。でも毎回、引数を２つも書くの面倒ですよね。どうせなら第二引数のログだけにしたいです。タグはそのクラス名が自動で入れば嬉しいです。そこで作りました。第一引数にログを書くだけです。<code>Log.d("ログ");</code>こんな風に。タグは自動でそれが書かれたクラス名が入ります。これはAndroid開発で個人的に使っていてかなり重宝しています。</p>
+
+<div><script src='https://gist.github.com/5696369.js'></script>
+<noscript><pre><code>public class Log {
+
+    public static void d(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.d(e.getClassName(), msg);
+    }
+    
+    public static void e(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.e(e.getClassName(), msg);
+    }
+    
+    public static void i(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.i(e.getClassName(), msg);
+    }
+    
+    public static void v(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.v(e.getClassName(), msg);
+    }
+    
+    public static void w(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.w(e.getClassName(), msg);
+    }
+    
+    public static void wtf(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.wtf(e.getClassName(), msg);
+    }
+}</code></pre></noscript></div>
+
+
+
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-01T12:03:00+09:00" pubdate data-updated="true">Nov 1<span>st</span>, 2013</time>
         
            | <a href="/blog/2013/11/01/do/#disqus_thread"
@@ -817,6 +894,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a>
+    
     <a class="list-group-item " href="/blog/2013/11/01/do/">毎日欠かさずチェックする「する／しない」リスト</a>
     
     <a class="list-group-item " href="/blog/2013/10/31/gsi/">地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました</a>
@@ -825,15 +904,13 @@
     
     <a class="list-group-item " href="/blog/2013/10/25/iphonehome/">iPhoneのホーム画面晒します</a>
     
-    <a class="list-group-item " href="/blog/2013/10/24/tomorrow/">XcodeでTomorrowテーマを設定する</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Category Cloud</h3>
   </div>
-  <span id="tag-cloud"><a href='/blog/categories/emberfire' style='font-size: 160.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 160.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 160.0%'>Firebase(1)</a> <a href='/blog/categories/iphone' style='font-size: 160.0%'>iPhone(1)</a> <a href='/blog/categories/xcode' style='font-size: 160.0%'>Xcode(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 160.0%'>ブックマークレット(1)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 160.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(1)</a> <a href='/blog/categories/地理院地図' style='font-size: 160.0%'>地理院地図(1)</a> </span>
+  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 160.0%'>Android(1)</a> <a href='/blog/categories/emberfire' style='font-size: 160.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 160.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 160.0%'>Firebase(1)</a> <a href='/blog/categories/iphone' style='font-size: 160.0%'>iPhone(1)</a> <a href='/blog/categories/xcode' style='font-size: 160.0%'>Xcode(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 160.0%'>ブックマークレット(1)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 160.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(1)</a> <a href='/blog/categories/地理院地図' style='font-size: 160.0%'>地理院地図(1)</a> </span>
 </section>
 
 <a class="twitter-timeline" href="https://twitter.com/honjo2" data-widget-id="392860723291754496">@honjo2 からのツイート</a>

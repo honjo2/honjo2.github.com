@@ -4,10 +4,10 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: レシピ - honjo2のブログ</title>
+  <title>AndroidのLogクラスのシンプルなラッパークラス - honjo2のブログ</title>
   <meta name="author" content="honjo2">
 
-  <meta name="description" content="Category: レシピ">
+  
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://honjo2.github.ioblog/categories/resipi">
+  <link rel="canonical" href="http://honjo2.github.io/blog/2013/11/06/log">
   <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="honjo2のブログ" type="application/atom+xml">
 
@@ -58,10 +58,10 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li >
+                <li class="active">
                     <a href="/">Home</a>
                 </li>
-                <li class="active">
+                <li >
                     <a href="/blog/archives">Archives</a>
                 </li>
             </ul>
@@ -85,70 +85,153 @@
         <div id="content">
           <div class="row">
   <div class="page-content col-md-9">
-    <article role="article">
+    <article class="hentry" role="article">
       
-        <header class="page-header">
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-06T21:00:00+09:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io">Comments</a>
+        
+      </p>
+    
+    
+    <h1 class="entry-title">
+        AndroidのLogクラスのシンプルなラッパークラス
+        
+    </h1>
+    
+  </header>
+
+
+<div class="entry-content clearfix"><p>Androidでログを出力するには<code>Log.d("MainActivity", "ログ");</code>という風に書くと思います。第一引数はタグですがここはクラス名とかを書いておいて第二引数にログを書く感じだと思います。でも毎回、引数を２つも書くの面倒ですよね。どうせなら第二引数のログだけにしたいです。タグはそのクラス名が自動で入れば嬉しいです。そこで作りました。第一引数にログを書くだけです。<code>Log.d("ログ");</code>こんな風に。タグは自動でそれが書かれたクラス名が入ります。これはAndroid開発で個人的に使っていてかなり重宝しています。</p>
+
+<div><script src='https://gist.github.com/5696369.js'></script>
+<noscript><pre><code>public class Log {
+
+    public static void d(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.d(e.getClassName(), msg);
+    }
+    
+    public static void e(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.e(e.getClassName(), msg);
+    }
+    
+    public static void i(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.i(e.getClassName(), msg);
+    }
+    
+    public static void v(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.v(e.getClassName(), msg);
+    }
+    
+    public static void w(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.w(e.getClassName(), msg);
+    }
+    
+    public static void wtf(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.wtf(e.getClassName(), msg);
+    }
+}</code></pre></noscript></div>
+
+
+
+</div>
+
+
+
+      <br />
+      <div>Ads</div><br />      
+      <script type="text/javascript"><!--
+      amazon_ad_tag = "honjo2-22"; amazon_ad_width = "728"; amazon_ad_height = "90";//--></script>
+      <script type="text/javascript" src="http://ir-jp.amazon-adsystem.com/s/ads.js"></script>
+
+      <footer>
+        <p class="meta text-muted">
           
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">honjo2</span></span>
+
           
-            <h1 class="entry-title">
-              Category: レシピ
-              
-            </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-06T21:00:00+09:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
           
-        </header>
-      
-      <div class="entry-content">
-        <div id="blog-archives" class="category">
-
-
-
-  
-  <h2>2013</h2>
-
-<article class="page-header">
-  
-<h1><a href="/blog/2013/10/25/keemacurry/">キーマカレーのレシピ</a></h1>
-<p class="meta text-muted">
-  
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-25T23:01:00+09:00" pubdate data-updated="true">Oct 25<span>th</span>, 2013</time>
-  
 
 <span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
-    <a class='category' href='/blog/categories/resipi/'>レシピ</a>
+    <a class='category' href='/blog/categories/android/'>Android</a>
   
 </span>
 
 
-</p>
-
-</article>
-
+        </p>
+        
+          <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://honjo2.github.io/blog/2013/11/06/log/" data-via="honjo2" data-counturl="http://honjo2.github.io/blog/2013/11/06/log/" >Tweet</a>
+  
+  
+  
 </div>
 
-      </div>
-      
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2013/11/01/do/" title="Previous Post: 毎日欠かさずチェックする「する／しない」リスト">&laquo; 毎日欠かさずチェックする「する／しない」リスト</a></li>
+            
+            
+          </ul>
+        
+      </footer>
     </article>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
     
   </div>
 
   
-    <aside class="sidebar col-md-3">
+  <aside class="sidebar col-md-3">
+    
       
-        
 <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">About Me</h3>
@@ -172,7 +255,7 @@
   
   <div id="recent_posts" class="list-group">
     
-    <a class="list-group-item " href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a>
+    <a class="list-group-item active" href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a>
     
     <a class="list-group-item " href="/blog/2013/11/01/do/">毎日欠かさずチェックする「する／しない」リスト</a>
     
@@ -200,8 +283,8 @@
 
 
 
-      
-    </aside>
+    
+  </aside>
   
 </div>
 
@@ -227,7 +310,10 @@
       var disqus_shortname = 'honjo2';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://honjo2.github.io/blog/2013/11/06/log/';
+        var disqus_url = 'http://honjo2.github.io/blog/2013/11/06/log/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

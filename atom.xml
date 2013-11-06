@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-11-01T12:32:57+09:00</updated>
+  <updated>2013-11-06T21:58:15+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[AndroidのLogクラスのシンプルなラッパークラス]]></title>
+    <link href="http://honjo2.github.io/blog/2013/11/06/log/"/>
+    <updated>2013-11-06T21:00:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/11/06/log</id>
+    <content type="html"><![CDATA[<p>Androidでログを出力するには<code>Log.d("MainActivity", "ログ");</code>という風に書くと思います。第一引数はタグですがここはクラス名とかを書いておいて第二引数にログを書く感じだと思います。でも毎回、引数を２つも書くの面倒ですよね。どうせなら第二引数のログだけにしたいです。タグはそのクラス名が自動で入れば嬉しいです。そこで作りました。第一引数にログを書くだけです。<code>Log.d("ログ");</code>こんな風に。タグは自動でそれが書かれたクラス名が入ります。これはAndroid開発で個人的に使っていてかなり重宝しています。</p>
+
+<div><script src='https://gist.github.com/5696369.js'></script>
+<noscript><pre><code>public class Log {
+
+    public static void d(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.d(e.getClassName(), msg);
+    }
+    
+    public static void e(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.e(e.getClassName(), msg);
+    }
+    
+    public static void i(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.i(e.getClassName(), msg);
+    }
+    
+    public static void v(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.v(e.getClassName(), msg);
+    }
+    
+    public static void w(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.w(e.getClassName(), msg);
+    }
+    
+    public static void wtf(String msg) {
+        StackTraceElement e = new Exception().getStackTrace()[1];
+        android.util.Log.wtf(e.getClassName(), msg);
+    }
+}</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[毎日欠かさずチェックする「する／しない」リスト]]></title>
