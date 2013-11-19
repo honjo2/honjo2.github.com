@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-11-06T21:58:15+09:00</updated>
+  <updated>2013-11-19T22:25:17+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[iOS版マピオンからストリートビューを開く]]></title>
+    <link href="http://honjo2.github.io/blog/2013/11/19/streetview/"/>
+    <updated>2013-11-19T21:45:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/11/19/streetview</id>
+    <content type="html"><![CDATA[<p><a href="http://mapion.github.io/MapionMaps-for-iOS-Sample/">iOS版マピオンマップ</a>を使ってマピオンの地図画面を作成し、その地図上を長押しするとストリートビューが開くサンプルを作りました。</p>
+
+<p>画面はこんな感じです。</p>
+
+<p><img src="http://honjo2.github.io/images/2013-11-19/streetview1.png" alt="" />
+<img src="http://honjo2.github.io/images/2013-11-19/streetview2.png" alt="" /></p>
+
+<p>地図上をタップするとその場所のストリートビューが開きます。</p>
+
+<ul>
+<li><a href="https://github.com/honjo2/StreetViewSample01">ソース</a></li>
+</ul>
+
+
+<p><a href="https://itunes.apple.com/us/app/mappujapan/id566951794?mt=8">マップJAPAN</a>にもこれと同じようにストリートビューを入れようと思っています。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[AndroidのLogクラスのシンプルなラッパークラス]]></title>
