@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-11-19T23:51:47+09:00</updated>
+  <updated>2013-11-27T22:16:29+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[コロンボカレーのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2013/11/27/colomboburry/"/>
+    <updated>2013-11-27T21:59:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/11/27/colomboburry</id>
+    <content type="html"><![CDATA[<p>自由が丘にあるスパイスブティック レピス・エピスでコロンボというスパイスを買いました。</p>
+
+<p>コロンボとはカリブ海のフランス領マルティニーク、グアドループで食べられている家庭料理です。</p>
+
+<p>コロンボがどういうものか詳しくは分からないので僕流になりますが、作ってみました。</p>
+
+<p>以下そのレシピです。</p>
+
+<p>ちなみに、僕は鶏むね肉が好きなので鶏むね肉を使いましたが、ひょっとしたらコロンボは鶏もも肉の方が合うかもしれないです。</p>
+
+<p><img src="http://honjo2.github.io/images/2013-11-27/colombocurry.jpg" alt="" /></p>
+
+<div><script src='https://gist.github.com/7675136.js'></script>
+<noscript><pre><code># コロンボカレー
+- 2人分
+
+# 材料
+- 鶏むね肉 500g ...1
+- ヨーグルト（無糖） 150g ...1
+- ターメリック 小さじ1/2 ...1
+- はちみつ 小さじ1 ...1
+- 塩 小さじ1 ...1
+- レピス・エピスのコロンボ 小さじ5 ...2
+- バター 50g ...3
+- 玉ねぎ 中2個 ...3
+- にんにく 2片 ...3
+- しょうが 1片 ...3
+- ホールトマト 1缶 ...5
+- 砂糖 小さじ1 ...6
+- 塩 小さじ 1/2 ...6
+- ココナッツミルク 300ml ...7
+- ピーナッツバター 小さじ1 ...7
+- 塩 少々 ...8
+- こしょう 少々 ...8
+- パクチー 1束 ...9
+
+# 手順
+1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
+2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
+3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
+4. 2のスパイスを加え軽く炒める
+5. ホールトマトを加え中火で5分煮込む
+6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
+7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
+8. 塩、こしょうで味を整える
+9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS版マピオンからストリートビューを開く]]></title>
