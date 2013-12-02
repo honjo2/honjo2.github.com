@@ -107,6 +107,72 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-12-02T22:27:00+09:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2013</time>
+        
+           | <a href="/blog/2013/12/02/webmerc/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2013/12/02/webmerc/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/02/webmerc/">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Webメルカトルに纏わる情報を求めるコマンドラインツールが欲しくなったので作りました。</p>
+
+<p><code>npm install webmerc -g</code> でインストールできます。</p>
+
+<p>npmページは<a href="https://npmjs.org/package/webmerc">ここ</a></p>
+
+<p>例えばこんなことができます。</p>
+
+<figure class='code'><figcaption><span>緯度経度をメートルに変換</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -m 35.7,139.7
+</span><span class='line'><span class="o">{</span> x: 15551332.863820316, y: 4259419.96554792 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>メートルを緯度経度に変換</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -g 15551332.863820316,4259419.96554792
+</span><span class='line'><span class="o">{</span> latitude: 139.7, longitude: 35.70000000000002 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ソースは<a href="https://github.com/honjo2/webmerc">ここ</a></p>
+
+<p>ちなみに、proj4は高機能ですが使いにくいし、Webメルカトル以外は使わないんですよね。</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-27T21:59:00+09:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
         
            | <a href="/blog/2013/11/27/colomboburry/#disqus_thread"
@@ -1034,6 +1100,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2013/12/02/webmerc/">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました</a>
+    
     <a class="list-group-item " href="/blog/2013/11/27/colomboburry/">コロンボカレーのレシピ</a>
     
     <a class="list-group-item " href="/blog/2013/11/19/streetview/">iOS版マピオンからストリートビューを開く</a>
@@ -1042,15 +1110,13 @@
     
     <a class="list-group-item " href="/blog/2013/11/01/do/">毎日欠かさずチェックする「する／しない」リスト</a>
     
-    <a class="list-group-item " href="/blog/2013/10/31/gsi/">地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Category Cloud</h3>
   </div>
-  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 130.0%'>Android(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/ios' style='font-size: 130.0%'>iOS(1)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 130.0%'>マピオン(1)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 130.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
+  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 130.0%'>Android(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/ios' style='font-size: 130.0%'>iOS(1)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/node-js' style='font-size: 130.0%'>Node.js(1)</a> <a href='/blog/categories/webmerc' style='font-size: 130.0%'>webmerc(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 130.0%'>マピオン(1)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 130.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
 </section>
 
 <a class="twitter-timeline" href="https://twitter.com/honjo2" data-widget-id="392860723291754496">@honjo2 からのツイート</a>
