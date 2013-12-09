@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-12-02T22:50:55+09:00</updated>
+  <updated>2013-12-09T11:02:27+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[マピオンのAPIを使ってOpenStreetMapをiOS/Androidで表示する]]></title>
+    <link href="http://honjo2.github.io/blog/2013/12/09/osmonios/"/>
+    <updated>2013-12-09T09:37:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/12/09/osmonios</id>
+    <content type="html"><![CDATA[<p><em>この投稿は<a href="http://qiita.com/advent-calendar/2013/osm">OpenStreetMap Advent Calendar</a> の9日目の記事です。</em></p>
+
+<p><a href="http://qiita.com/hal_sk/items/e0b3ca53303976bc0235">8日目の記事</a> を拝見させていただいて、マピオンのAPIも紹介したいなと思い書いてみることにしました。</p>
+
+<p>OpenStreetMapをiOSで表示させることができるライブラリはroute-meとMapBoxがありますが、どちらも以下のようなデメリットがあったと記憶しています。</p>
+
+<ul>
+<li>タイル表示が遅い
+
+<ul>
+<li>対象のタイルを取得する前にzoom-1のタイルを取得し2倍したものを一時的に表示させている（zoom-1のタイルのキャッシュが利用できればそれほど問題ではないが初めての場所だとリクエストの時間が無駄にかかる）</li>
+</ul>
+</li>
+<li>大縮尺でスクロールするとライン、ポリゴン、サークル、ピンなどのレイヤの動きがカクカクする
+
+<ul>
+<li>UIScrollViewは内部でCGPointを使っているが、このフィールドはCGFloatであるため32bitの場合float型になり大きな値の計算で誤差が生じてしまっている</li>
+</ul>
+</li>
+</ul>
+
+
+<p>マピオンのAPIはそのようなことがないです。</p>
+
+<p>ここにOpenStreetMapを表示するコードを書いてもいいのですが、公式サイトにまるまるあるのでリンクを貼らせてもらいます。</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-iOS-Sample/document.html#orgmap">OpenStreetMapをiOSで表示するコード</a></p>
+
+<p>Androidもまるまるあるのでリンクを貼るだけにさせてもらいます^^;</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-Android-Sample/document.html#osm">OpenStreetMapをAndroidで表示するコード</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました]]></title>
@@ -75,30 +114,32 @@
 - ターメリック 小さじ1/2 ...1
 - はちみつ 小さじ1 ...1
 - 塩 小さじ1 ...1
-- レピス・エピスのコロンボ 小さじ5 ...2
-- バター 50g ...3
-- 玉ねぎ 中2個 ...3
-- にんにく 2片 ...3
-- しょうが 1片 ...3
-- ホールトマト 1缶 ...5
-- 砂糖 小さじ1 ...6
-- 塩 小さじ 1/2 ...6
-- ココナッツミルク 300ml ...7
-- ピーナッツバター 小さじ1 ...7
-- 塩 少々 ...8
-- こしょう 少々 ...8
-- パクチー 1束 ...9
+- レピス・エピスのコロンボ 小さじ3.5 ...2
+- チリーペッパー 小さじ1/2 ...2
+- クミンシード 小さじ1/2 ...3
+- バター 50g ...4
+- 玉ねぎ 中2個 ...4
+- にんにく 2片 ...4
+- しょうが 1片 ...4
+- トマト 3個 ...6
+- 砂糖 小さじ1 ...7
+- 塩 小さじ 1/2 ...7
+- 生クリーム 200ml ...8
+- 塩 少々 ...9
+- こしょう 少々 ...9
+- パクチー 1束 ...10
 
 # 手順
 1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
-2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
-3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
-4. 2のスパイスを加え軽く炒める
-5. ホールトマトを加え中火で5分煮込む
-6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
-7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
-8. 塩、こしょうで味を整える
-9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+2. スパイスブティック レピス・エピスのコロンボとチリーペッパーを用意する
+3. 鍋にクミンシードを入れ香りが出るまで炒める
+4. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
+5. 2のスパイスを加え軽く炒める
+6. 湯がいて皮を剥いたトマトをざく切りにし鍋に加え中火で5分煮込む
+7. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
+8. 生クリームを加え弱火で5分煮込む
+9. 塩、こしょうで味を整える
+10. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
 
 ]]></content>
   </entry>

@@ -107,6 +107,76 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-12-09T09:37:00+09:00" pubdate data-updated="true">Dec 9<span>th</span>, 2013</time>
+        
+           | <a href="/blog/2013/12/09/osmonios/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2013/12/09/osmonios/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/09/osmonios/">マピオンのAPIを使ってOpenStreetMapをiOS/Androidで表示する</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p><em>この投稿は<a href="http://qiita.com/advent-calendar/2013/osm">OpenStreetMap Advent Calendar</a> の9日目の記事です。</em></p>
+
+<p><a href="http://qiita.com/hal_sk/items/e0b3ca53303976bc0235">8日目の記事</a> を拝見させていただいて、マピオンのAPIも紹介したいなと思い書いてみることにしました。</p>
+
+<p>OpenStreetMapをiOSで表示させることができるライブラリはroute-meとMapBoxがありますが、どちらも以下のようなデメリットがあったと記憶しています。</p>
+
+<ul>
+<li>タイル表示が遅い
+
+<ul>
+<li>対象のタイルを取得する前にzoom-1のタイルを取得し2倍したものを一時的に表示させている（zoom-1のタイルのキャッシュが利用できればそれほど問題ではないが初めての場所だとリクエストの時間が無駄にかかる）</li>
+</ul>
+</li>
+<li>大縮尺でスクロールするとライン、ポリゴン、サークル、ピンなどのレイヤの動きがカクカクする
+
+<ul>
+<li>UIScrollViewは内部でCGPointを使っているが、このフィールドはCGFloatであるため32bitの場合float型になり大きな値の計算で誤差が生じてしまっている</li>
+</ul>
+</li>
+</ul>
+
+
+<p>マピオンのAPIはそのようなことがないです。</p>
+
+<p>ここにOpenStreetMapを表示するコードを書いてもいいのですが、公式サイトにまるまるあるのでリンクを貼らせてもらいます。</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-iOS-Sample/document.html#orgmap">OpenStreetMapをiOSで表示するコード</a></p>
+
+<p>Androidもまるまるあるのでリンクを貼るだけにさせてもらいます^^;</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-Android-Sample/document.html#osm">OpenStreetMapをAndroidで表示するコード</a></p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-12-02T22:27:00+09:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2013</time>
         
            | <a href="/blog/2013/12/02/webmerc/#disqus_thread"
@@ -208,30 +278,32 @@
 - ターメリック 小さじ1/2 ...1
 - はちみつ 小さじ1 ...1
 - 塩 小さじ1 ...1
-- レピス・エピスのコロンボ 小さじ5 ...2
-- バター 50g ...3
-- 玉ねぎ 中2個 ...3
-- にんにく 2片 ...3
-- しょうが 1片 ...3
-- ホールトマト 1缶 ...5
-- 砂糖 小さじ1 ...6
-- 塩 小さじ 1/2 ...6
-- ココナッツミルク 300ml ...7
-- ピーナッツバター 小さじ1 ...7
-- 塩 少々 ...8
-- こしょう 少々 ...8
-- パクチー 1束 ...9
+- レピス・エピスのコロンボ 小さじ3.5 ...2
+- チリーペッパー 小さじ1/2 ...2
+- クミンシード 小さじ1/2 ...3
+- バター 50g ...4
+- 玉ねぎ 中2個 ...4
+- にんにく 2片 ...4
+- しょうが 1片 ...4
+- トマト 3個 ...6
+- 砂糖 小さじ1 ...7
+- 塩 小さじ 1/2 ...7
+- 生クリーム 200ml ...8
+- 塩 少々 ...9
+- こしょう 少々 ...9
+- パクチー 1束 ...10
 
 # 手順
 1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
-2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
-3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
-4. 2のスパイスを加え軽く炒める
-5. ホールトマトを加え中火で5分煮込む
-6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
-7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
-8. 塩、こしょうで味を整える
-9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+2. スパイスブティック レピス・エピスのコロンボとチリーペッパーを用意する
+3. 鍋にクミンシードを入れ香りが出るまで炒める
+4. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
+5. 2のスパイスを加え軽く炒める
+6. 湯がいて皮を剥いたトマトをざく切りにし鍋に加え中火で5分煮込む
+7. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
+8. 生クリームを加え弱火で5分煮込む
+9. 塩、こしょうで味を整える
+10. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
 
 </div>
   
@@ -796,275 +868,11 @@
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-23T13:09:00+09:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2013</time>
-        
-           | <a href="/blog/2013/10/23/emberfire/#disqus_thread"
-             data-disqus-identifier="http://honjo2.github.io/blog/2013/10/23/emberfire/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/23/emberfire/">EmberFireが出た</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><h1>EmberFireとは？</h1>
-
-<ul>
-<li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
-<li><a href="https://www.firebase.com/blog/2013-10-22-firebase-bindings-for-ember.html">Announcing Firebase Bindings for EmberJS</a></li>
-</ul>
-
-
-<h1>サンプルを動かす</h1>
-
-<ol>
-<li><code>git clone https://github.com/firebase/emberFire.git</code></li>
-<li><code>cd emberFire</code></li>
-<li><p><code>open examples/chat/index.html</code></p>
-
-<p> <img src="/images/2013-10-23/emberfirechat.png" alt="" /></p></li>
-</ol>
-
-
-<h1>ソース</h1>
-
-<figure class='code'><figcaption><span>index.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'><span class="nt">&lt;head&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;title&gt;</span>EmberFire Test chat<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;https://www.firebase.com/css/example.css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;style&gt;</span>
-</span><span class='line'>    <span class="nt">button</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">15</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>      <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nf">#nameInput</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nf">#messageInput</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">60</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="nt">&lt;/style&gt;</span>
-</span><span class='line'><span class="nt">&lt;/head&gt;</span>
-</span><span class='line'><span class="nt">&lt;body&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">EmberFire</span> <span class="nx">Chat</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="nx">outlet</span><span class="err">｝｝</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- データを全て表示 --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span> <span class="na">data-template-name=</span><span class="s">&quot;index&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="err">｛｛#</span><span class="nx">scrolling</span><span class="o">-</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;messagesDiv&quot;</span> <span class="nx">update</span><span class="o">-</span><span class="nx">when</span><span class="o">=</span><span class="k">this</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="err">｛｛#</span><span class="nx">each</span><span class="err">｝｝</span>
-</span><span class='line'>        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="err">｛｛</span><span class="nx">from</span><span class="err">｝｝</span><span class="o">&lt;</span><span class="err">/em&gt;: ｛｛msg｝｝&lt;/div&gt;</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="o">/</span><span class="nx">each</span><span class="err">｝｝</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="o">/</span><span class="nx">scrolling</span><span class="o">-</span><span class="nx">div</span><span class="err">｝｝</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">form</span> <span class="err">｛｛</span><span class="nx">action</span> <span class="s2">&quot;sendMessage&quot;</span> <span class="nx">on</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="err">｝｝</span><span class="o">&gt;</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;nameInput&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="nx">from</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;messageInput&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="nx">msg</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Message...&quot;</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="nx">submit</span><span class="o">&gt;</span><span class="nx">Send</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="err">/form&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span> <span class="na">id=</span><span class="s">&quot;components/scrolling-div&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="nx">yield</span><span class="err">｝｝</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- FireEmberに必要なjs --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdn.firebase.com/v0/firebase.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="c">&lt;!--&lt;script src=&quot;http://builds.emberjs.com/tags/v1.0.0/ember.js&quot;&gt;&lt;/script&gt;--&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://builds.emberjs.com/ember-latest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../../emberfire-latest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- このアプリ用のjs --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>app.js</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">App</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// 使用するFirebaseを指定</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">IndexRoute</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">model</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">EmberFire</span><span class="p">.</span><span class="nb">Array</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
-</span><span class='line'>      <span class="nx">ref</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Firebase</span><span class="p">(</span><span class="s2">&quot;https://ember-chat.firebaseio-demo.com/&quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// データを保存</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">IndexController</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">ArrayController</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">from</span><span class="o">:</span> <span class="s2">&quot;Guest&quot;</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span>
-</span><span class='line'>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">sendMessage</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">pushObject</span><span class="p">({</span><span class="nx">from</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;from&quot;</span><span class="p">),</span> <span class="nx">msg</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;msg&quot;</span><span class="p">)});</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;msg&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// HTMLを見やすく</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">ScrollingDivComponent</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Component</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">scheduleScrollIntoView</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Only run once per tick, once rendering has completed;</span>
-</span><span class='line'>    <span class="c1">// avoid flood of scrolls when many updates happen at once</span>
-</span><span class='line'>    <span class="nx">Ember</span><span class="p">.</span><span class="nx">run</span><span class="p">.</span><span class="nx">scheduleOnce</span><span class="p">(</span><span class="s2">&quot;afterRender&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="s2">&quot;scrollIntoView&quot;</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}.</span><span class="nx">observes</span><span class="p">(</span><span class="s2">&quot;update-when.@each&quot;</span><span class="p">),</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">scrollIntoView</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">().</span><span class="nx">scrollTop</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">().</span><span class="nx">prop</span><span class="p">(</span><span class="s2">&quot;scrollHeight&quot;</span><span class="p">));</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>データ</h1>
-
-<ul>
-<li><p>データはこんな感じで保存されています</p>
-
-<p>  <img src="/images/2013-10-23/firebasedata.png" alt="" /></p></li>
-<li><p>ちなみにこれはデモ用のデータベースなので誰でも見ることができます</p>
-
-<ul>
-<li><a href="https://ember-chat.firebaseio-demo.com/">https://ember-chat.firebaseio-demo.com/</a></li>
-</ul>
-</li>
-</ul>
-
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
       
-        <li class="previous disabled"><a href="#">&larr;&nbsp;Older</a></li>
+        <li class="previous"><a href="/blog/page/2/">&larr;&nbsp;Older</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
       
@@ -1100,6 +908,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2013/12/09/osmonios/">マピオンのAPIを使ってOpenStreetMapをiOS/Androidで表示する</a>
+    
     <a class="list-group-item " href="/blog/2013/12/02/webmerc/">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました</a>
     
     <a class="list-group-item " href="/blog/2013/11/27/colomboburry/">コロンボカレーのレシピ</a>
@@ -1108,15 +918,13 @@
     
     <a class="list-group-item " href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a>
     
-    <a class="list-group-item " href="/blog/2013/11/01/do/">毎日欠かさずチェックする「する／しない」リスト</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Category Cloud</h3>
   </div>
-  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 130.0%'>Android(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/ios' style='font-size: 130.0%'>iOS(1)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/node-js' style='font-size: 130.0%'>Node.js(1)</a> <a href='/blog/categories/webmerc' style='font-size: 130.0%'>webmerc(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 130.0%'>マピオン(1)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 130.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
+  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 130.0%'>Android(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(2)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/node-js' style='font-size: 130.0%'>Node.js(1)</a> <a href='/blog/categories/openstreetmap' style='font-size: 130.0%'>OpenStreetMap(1)</a> <a href='/blog/categories/webmerc' style='font-size: 130.0%'>webmerc(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 160.0%'>マピオン(2)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 130.0%'>ライフスタイル(1)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
 </section>
 
 <a class="twitter-timeline" href="https://twitter.com/honjo2" data-widget-id="392860723291754496">@honjo2 からのツイート</a>

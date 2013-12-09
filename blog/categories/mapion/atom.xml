@@ -4,7 +4,7 @@
   <title><![CDATA[Category: マピオン | honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/blog/categories/mapion/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-12-02T22:50:55+09:00</updated>
+  <updated>2013-12-09T11:02:27+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[マピオンのAPIを使ってOpenStreetMapをiOS/Androidで表示する]]></title>
+    <link href="http://honjo2.github.io/blog/2013/12/09/osmonios/"/>
+    <updated>2013-12-09T09:37:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2013/12/09/osmonios</id>
+    <content type="html"><![CDATA[<p><em>この投稿は<a href="http://qiita.com/advent-calendar/2013/osm">OpenStreetMap Advent Calendar</a> の9日目の記事です。</em></p>
+
+<p><a href="http://qiita.com/hal_sk/items/e0b3ca53303976bc0235">8日目の記事</a> を拝見させていただいて、マピオンのAPIも紹介したいなと思い書いてみることにしました。</p>
+
+<p>OpenStreetMapをiOSで表示させることができるライブラリはroute-meとMapBoxがありますが、どちらも以下のようなデメリットがあったと記憶しています。</p>
+
+<ul>
+<li>タイル表示が遅い
+
+<ul>
+<li>対象のタイルを取得する前にzoom-1のタイルを取得し2倍したものを一時的に表示させている（zoom-1のタイルのキャッシュが利用できればそれほど問題ではないが初めての場所だとリクエストの時間が無駄にかかる）</li>
+</ul>
+</li>
+<li>大縮尺でスクロールするとライン、ポリゴン、サークル、ピンなどのレイヤの動きがカクカクする
+
+<ul>
+<li>UIScrollViewは内部でCGPointを使っているが、このフィールドはCGFloatであるため32bitの場合float型になり大きな値の計算で誤差が生じてしまっている</li>
+</ul>
+</li>
+</ul>
+
+
+<p>マピオンのAPIはそのようなことがないです。</p>
+
+<p>ここにOpenStreetMapを表示するコードを書いてもいいのですが、公式サイトにまるまるあるのでリンクを貼らせてもらいます。</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-iOS-Sample/document.html#orgmap">OpenStreetMapをiOSで表示するコード</a></p>
+
+<p>Androidもまるまるあるのでリンクを貼るだけにさせてもらいます^^;</p>
+
+<p><a href="http://mapion.github.io/MapionMaps-for-Android-Sample/document.html#osm">OpenStreetMapをAndroidで表示するコード</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS版マピオンからストリートビューを開く]]></title>
