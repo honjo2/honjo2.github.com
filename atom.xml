@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-12-09T11:02:27+09:00</updated>
+  <updated>2013-12-09T11:08:58+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[マピオンのAPIを使ってOpenStreetMapをiOS/Androidで表示する]]></title>
     <link href="http://honjo2.github.io/blog/2013/12/09/osmonios/"/>
-    <updated>2013-12-09T09:37:00+09:00</updated>
+    <updated>2013-12-09T09:38:00+09:00</updated>
     <id>http://honjo2.github.io/blog/2013/12/09/osmonios</id>
     <content type="html"><![CDATA[<p><em>この投稿は<a href="http://qiita.com/advent-calendar/2013/osm">OpenStreetMap Advent Calendar</a> の9日目の記事です。</em></p>
 
