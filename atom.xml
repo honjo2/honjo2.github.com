@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2013-12-09T11:08:58+09:00</updated>
+  <updated>2013-12-11T11:23:21+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -65,6 +65,24 @@
 
 <p>例えばこんなことができます。</p>
 
+<figure class='code'><figcaption><span>緯度経度からピクセルを求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --c2p 35.7,139.7,15
+</span><span class='line'><span class="o">{</span> x: 7449549.938230911, y: 3302710.99871282 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>ピクセルから緯度経度を求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --p2c 7449549.938230911,3302710.99871282,15
+</span><span class='line'><span class="o">{</span> latitude: 139.70000000000002, longitude: 35.70000000000002 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
 <figure class='code'><figcaption><span>緯度経度をメートルに変換</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -m 35.7,139.7
@@ -78,6 +96,15 @@
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -g 15551332.863820316,4259419.96554792
 </span><span class='line'><span class="o">{</span> latitude: 139.7, longitude: 35.70000000000002 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>緯度経度からタイルインデックスを求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --tileindex 35.7,139.7,15
+</span><span class='line'>15/29099/12901
 </span></code></pre></td></tr></table></div></figure>
 
 
