@@ -107,6 +107,141 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-02-02T22:16:00+09:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
+        
+           | <a href="/blog/2014/02/02/starting-go/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2014/02/02/starting-go/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/02/starting-go/">Go事始め</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><h1>GVM（バージョン管理）インストール</h1>
+
+<p><code>bash &lt; &lt;(curl -s https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer)</code></p>
+
+<h1>.zshrc（.bashrc）に以下追記</h1>
+
+<figure class='code'><figcaption><span>.zshrc</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.gvm/bin
+</span><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>インストール可能なバージョンを確認</h1>
+
+<p><code>gvm listall</code></p>
+
+<h1>Goインストール</h1>
+
+<p><code>go install go1.2</code></p>
+
+<h1>インストールされているバージョンを確認</h1>
+
+<p><code>gvm list</code></p>
+
+<h1>使いたいGoのバージョンを指定</h1>
+
+<p><code>gvm use go1.2</code></p>
+
+<blockquote><p>常にこのバージョンを使いたい場合はこれを.zshrc（.bashrc）に追記しておく</p></blockquote>
+
+<h1>GoSublime（Sublime Text用プラグイン）インストール</h1>
+
+<ol>
+<li>Sublime Text 3を開き、Cmd+pで<code>Package Control: Install Package</code>と入力しエンター</li>
+<li>さらに<code>gosublime</code>と入力しエンター</li>
+<li><code>Preferences -&gt; Package Settings -&gt; GoSublimge -&gt; Settings – User</code>に以下入力</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>GoSublime.sublime-settings</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;GOPATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/pkgsets/go1.2/global&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/gos/go1.2/bin&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nt">&quot;gslint_cmd&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;go&quot;</span><span class="p">,</span> <span class="s2">&quot;tool&quot;</span><span class="p">,</span> <span class="s2">&quot;gotype&quot;</span><span class="p">,</span> <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="s2">&quot;$pkg&quot;</span><span class="p">,</span> <span class="s2">&quot;$files&quot;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_tests&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_builtins&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;fmt_tab_width&quot;</span><span class="p">:</span> <span class="mi">4</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>GVMが$GOPATHを設定してくれているのでecho <code>$GOPATH</code>で確認できる</p></blockquote>
+
+<h1>サンプルコード作成</h1>
+
+<figure class='code'><figcaption><span>main.go</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="kn">package</span> <span class="nx">main</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="p">(</span>
+</span><span class='line'>    <span class="s">&quot;fmt&quot;</span>
+</span><span class='line'><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, 世界&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Sublime Text上で実行</h1>
+
+<ol>
+<li>Cmd+9でコマンドシェルを開く</li>
+<li>cdコマンドでカレントに移動</li>
+<li><code>run main.go</code>で実行</li>
+</ol>
+
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-02-01T22:23:00+09:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time>
         
            | <a href="/blog/2014/02/01/weekend/#disqus_thread"
@@ -717,81 +852,6 @@
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-10-25T23:01:00+09:00" pubdate data-updated="true">Oct 25<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/10/25/keemacurry/#disqus_thread"
-             data-disqus-identifier="http://honjo2.github.io/blog/2013/10/25/keemacurry/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/25/keemacurry/">キーマカレーのレシピ</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><p>今日脳内で考えたレシピでキーマカレーを作りました。当然すんなりはできず、色々微調整してなかなか美味しいキーマカレーができました。その修正版レシピを書きます。</p>
-
-<p><img src="/images/2013-10-25/keemacurry.jpg" alt="" /></p>
-
-<div><script src='https://gist.github.com/7149667.js'></script>
-<noscript><pre><code># キーマカレー
-- 2人分
-
-# 材料
-- サラダ油 80cc ...1
-- 玉ねぎ 中2個 ...1
-- にんにく 2かけ ...1
-- しょうが 10g ...1
-- クミン 小さじ1 ...2
-- ターメリック 小さじ1 ...2
-- コリアンダー 小さじ1 ...2
-- パプリカ 小さじ1 ...2
-- ガラムマサラ 小さじ1 ...2
-- チリーペッパー 小さじ1 ...2
-- 合挽き肉 500g ...2
-- ホールトマト 1缶 ...3
-- プレーンヨーグルト 100g ...3
-- 生クリーム 150ml ...3
-- 砂糖 小さじ1 ...3
-- 塩 小さじ1 ...3
-- 塩 少々 ...4
-- こしょう 少々 ...4
-- パクチー 1束 ...5
-
-# 手順
-1. 鍋にサラダ油、みじん切りにした玉ねぎ、にんにく、しょうがを入れきつね色になるまで炒める
-2. スパイス、合挽き肉を加え軽く炒める
-3. ホールトマト、プレーンヨーグルト、生クリーム、砂糖、塩を加え蓋をせずに中火で時々かき混ぜながら15分煮込む
-4. 塩、こしょうで味を整える
-5. お皿に盛りつけ、パクチーを添えて完成</code></pre></noscript></div>
-
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -832,6 +892,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2014/02/02/starting-go/">Go事始め</a>
+    
     <a class="list-group-item " href="/blog/2014/02/01/weekend/">僕の休日</a>
     
     <a class="list-group-item " href="/blog/2013/12/12/tmr02/">BMCのTMR02を購入しました</a>
@@ -840,15 +902,13 @@
     
     <a class="list-group-item " href="/blog/2013/12/02/webmerc/">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました</a>
     
-    <a class="list-group-item " href="/blog/2013/11/27/colomboburry/">コロンボカレーのレシピ</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Category Cloud</h3>
   </div>
-  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 160.0%'>Android(2)</a> <a href='/blog/categories/bmc' style='font-size: 130.0%'>BMC(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(2)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/node-js' style='font-size: 130.0%'>Node.js(1)</a> <a href='/blog/categories/npm' style='font-size: 130.0%'>npm(1)</a> <a href='/blog/categories/openstreetmap' style='font-size: 130.0%'>OpenStreetMap(1)</a> <a href='/blog/categories/tmr02' style='font-size: 130.0%'>TMR02(1)</a> <a href='/blog/categories/webmerc' style='font-size: 130.0%'>webmerc(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 160.0%'>マピオン(2)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 160.0%'>ライフスタイル(2)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/ロードバイク' style='font-size: 130.0%'>ロードバイク(1)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
+  <span id="tag-cloud"><a href='/blog/categories/android' style='font-size: 160.0%'>Android(2)</a> <a href='/blog/categories/bmc' style='font-size: 130.0%'>BMC(1)</a> <a href='/blog/categories/emberfire' style='font-size: 130.0%'>EmberFire(1)</a> <a href='/blog/categories/emberjs' style='font-size: 130.0%'>EmberJS(1)</a> <a href='/blog/categories/firebase' style='font-size: 130.0%'>Firebase(1)</a> <a href='/blog/categories/go' style='font-size: 130.0%'>Go(1)</a> <a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(2)</a> <a href='/blog/categories/iphone' style='font-size: 130.0%'>iPhone(1)</a> <a href='/blog/categories/node-js' style='font-size: 130.0%'>Node.js(1)</a> <a href='/blog/categories/npm' style='font-size: 130.0%'>npm(1)</a> <a href='/blog/categories/openstreetmap' style='font-size: 130.0%'>OpenStreetMap(1)</a> <a href='/blog/categories/tmr02' style='font-size: 130.0%'>TMR02(1)</a> <a href='/blog/categories/webmerc' style='font-size: 130.0%'>webmerc(1)</a> <a href='/blog/categories/xcode' style='font-size: 130.0%'>Xcode(1)</a> <a href='/blog/categories/ストリートビュー' style='font-size: 130.0%'>ストリートビュー(1)</a> <a href='/blog/categories/ブックマークレット' style='font-size: 130.0%'>ブックマークレット(1)</a> <a href='/blog/categories/マピオン' style='font-size: 160.0%'>マピオン(2)</a> <a href='/blog/categories/ライフスタイル' style='font-size: 160.0%'>ライフスタイル(2)</a> <a href='/blog/categories/レシピ' style='font-size: 160.0%'>レシピ(2)</a> <a href='/blog/categories/ロードバイク' style='font-size: 130.0%'>ロードバイク(1)</a> <a href='/blog/categories/地理院地図' style='font-size: 130.0%'>地理院地図(1)</a> </span>
 </section>
 
 <a class="twitter-timeline" href="https://twitter.com/honjo2" data-widget-id="392860723291754496">@honjo2 からのツイート</a>

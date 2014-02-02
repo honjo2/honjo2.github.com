@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-02-01T23:54:56+09:00</updated>
+  <updated>2014-02-02T22:50:08+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,110 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Go事始め]]></title>
+    <link href="http://honjo2.github.io/blog/2014/02/02/starting-go/"/>
+    <updated>2014-02-02T22:16:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/02/02/starting-go</id>
+    <content type="html"><![CDATA[<h1>GVM（バージョン管理）インストール</h1>
+
+<p><code>bash &lt; &lt;(curl -s https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer)</code></p>
+
+<h1>.zshrc（.bashrc）に以下追記</h1>
+
+<figure class='code'><figcaption><span>.zshrc</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.gvm/bin
+</span><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>インストール可能なバージョンを確認</h1>
+
+<p><code>gvm listall</code></p>
+
+<h1>Goインストール</h1>
+
+<p><code>go install go1.2</code></p>
+
+<h1>インストールされているバージョンを確認</h1>
+
+<p><code>gvm list</code></p>
+
+<h1>使いたいGoのバージョンを指定</h1>
+
+<p><code>gvm use go1.2</code></p>
+
+<blockquote><p>常にこのバージョンを使いたい場合はこれを.zshrc（.bashrc）に追記しておく</p></blockquote>
+
+<h1>GoSublime（Sublime Text用プラグイン）インストール</h1>
+
+<ol>
+<li>Sublime Text 3を開き、Cmd+pで<code>Package Control: Install Package</code>と入力しエンター</li>
+<li>さらに<code>gosublime</code>と入力しエンター</li>
+<li><code>Preferences -&gt; Package Settings -&gt; GoSublimge -&gt; Settings – User</code>に以下入力</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>GoSublime.sublime-settings</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;GOPATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/pkgsets/go1.2/global&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/gos/go1.2/bin&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nt">&quot;gslint_cmd&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;go&quot;</span><span class="p">,</span> <span class="s2">&quot;tool&quot;</span><span class="p">,</span> <span class="s2">&quot;gotype&quot;</span><span class="p">,</span> <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="s2">&quot;$pkg&quot;</span><span class="p">,</span> <span class="s2">&quot;$files&quot;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_tests&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_builtins&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;fmt_tab_width&quot;</span><span class="p">:</span> <span class="mi">4</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>GVMが$GOPATHを設定してくれているのでecho <code>$GOPATH</code>で確認できる</p></blockquote>
+
+<h1>サンプルコード作成</h1>
+
+<figure class='code'><figcaption><span>main.go</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="kn">package</span> <span class="nx">main</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="p">(</span>
+</span><span class='line'>    <span class="s">&quot;fmt&quot;</span>
+</span><span class='line'><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, 世界&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Sublime Text上で実行</h1>
+
+<ol>
+<li>Cmd+9でコマンドシェルを開く</li>
+<li>cdコマンドでカレントに移動</li>
+<li><code>run main.go</code>で実行</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[僕の休日]]></title>

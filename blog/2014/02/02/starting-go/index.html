@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>コロンボカレーのレシピ - honjo2のブログ</title>
+  <title>Go事始め - honjo2のブログ</title>
   <meta name="author" content="honjo2">
 
   
@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://honjo2.github.io/blog/2013/11/27/colomboburry">
+  <link rel="canonical" href="http://honjo2.github.io/blog/2014/02/02/starting-go">
   <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="honjo2のブログ" type="application/atom+xml">
 
@@ -103,7 +103,7 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-27T21:59:00+09:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-02-02T22:16:00+09:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://honjo2.github.io">Comments</a>
@@ -112,59 +112,108 @@
     
     
     <h1 class="entry-title">
-        コロンボカレーのレシピ
+        Go事始め
         
     </h1>
     
   </header>
 
 
-<div class="entry-content clearfix"><p>自由が丘にあるスパイスブティック レピス・エピスでコロンボというスパイスを買いました。</p>
+<div class="entry-content clearfix"><h1>GVM（バージョン管理）インストール</h1>
 
-<p>コロンボとはカリブ海のフランス領マルティニーク、グアドループで食べられている家庭料理です。</p>
+<p><code>bash &lt; &lt;(curl -s https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer)</code></p>
 
-<p>コロンボがどういうものか詳しくは分からないので僕流になりますが、作ってみました。</p>
+<h1>.zshrc（.bashrc）に以下追記</h1>
 
-<p>以下そのレシピです。</p>
+<figure class='code'><figcaption><span>.zshrc</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/.gvm/bin
+</span><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.gvm/scripts/gvm&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p>ちなみに、僕は鶏むね肉が好きなので鶏むね肉を使いましたが、ひょっとしたらコロンボは鶏もも肉の方が合うかもしれないです。</p>
 
-<p><img src="/images/2013-11-27/colombocurry.jpg" alt="" /></p>
+<h1>インストール可能なバージョンを確認</h1>
 
-<div><script src='https://gist.github.com/7675136.js'></script>
-<noscript><pre><code># コロンボカレー
-- 2人分
+<p><code>gvm listall</code></p>
 
-# 材料
-- 鶏むね肉 500g ...1
-- ヨーグルト（無糖） 150g ...1
-- ターメリック 小さじ1/2 ...1
-- はちみつ 小さじ1 ...1
-- 塩 小さじ1 ...1
-- レピス・エピスのコロンボ 小さじ5 ...2
-- バター 50g ...3
-- 玉ねぎ 中2個 ...3
-- にんにく 2片 ...3
-- しょうが 1片 ...3
-- ホールトマト 1缶 ...5
-- 砂糖 小さじ1 ...6
-- 塩 小さじ 1/2 ...6
-- ココナッツミルク 300ml ...7
-- ピーナッツバター 小さじ1 ...7
-- 塩 少々 ...8
-- こしょう 少々 ...8
-- パクチー 1束 ...9
+<h1>Goインストール</h1>
 
-# 手順
-1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
-2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
-3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
-4. 2のスパイスを加え軽く炒める
-5. ホールトマトを加え中火で5分煮込む
-6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
-7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
-8. 塩、こしょうで味を整える
-9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+<p><code>go install go1.2</code></p>
+
+<h1>インストールされているバージョンを確認</h1>
+
+<p><code>gvm list</code></p>
+
+<h1>使いたいGoのバージョンを指定</h1>
+
+<p><code>gvm use go1.2</code></p>
+
+<blockquote><p>常にこのバージョンを使いたい場合はこれを.zshrc（.bashrc）に追記しておく</p></blockquote>
+
+<h1>GoSublime（Sublime Text用プラグイン）インストール</h1>
+
+<ol>
+<li>Sublime Text 3を開き、Cmd+pで<code>Package Control: Install Package</code>と入力しエンター</li>
+<li>さらに<code>gosublime</code>と入力しエンター</li>
+<li><code>Preferences -&gt; Package Settings -&gt; GoSublimge -&gt; Settings – User</code>に以下入力</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>GoSublime.sublime-settings</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nt">&quot;GOPATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/pkgsets/go1.2/global&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nt">&quot;PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;$HOME/.gvm/gos/go1.2/bin&quot;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nt">&quot;gslint_cmd&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;go&quot;</span><span class="p">,</span> <span class="s2">&quot;tool&quot;</span><span class="p">,</span> <span class="s2">&quot;gotype&quot;</span><span class="p">,</span> <span class="s2">&quot;-p&quot;</span><span class="p">,</span> <span class="s2">&quot;$pkg&quot;</span><span class="p">,</span> <span class="s2">&quot;$files&quot;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_tests&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;autocomplete_builtins&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;fmt_tab_width&quot;</span><span class="p">:</span> <span class="mi">4</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>GVMが$GOPATHを設定してくれているのでecho <code>$GOPATH</code>で確認できる</p></blockquote>
+
+<h1>サンプルコード作成</h1>
+
+<figure class='code'><figcaption><span>main.go</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="kn">package</span> <span class="nx">main</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="p">(</span>
+</span><span class='line'>    <span class="s">&quot;fmt&quot;</span>
+</span><span class='line'><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, 世界&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Sublime Text上で実行</h1>
+
+<ol>
+<li>Cmd+9でコマンドシェルを開く</li>
+<li>cdコマンドでカレントに移動</li>
+<li><code>run main.go</code>で実行</li>
+</ol>
 
 </div>
 
@@ -196,13 +245,13 @@
 
 
 
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-27T21:59:00+09:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-02-02T22:16:00+09:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
           
 
 <span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
-    <a class='category' href='/blog/categories/resipi/'>レシピ</a>
+    <a class='category' href='/blog/categories/go/'>Go</a>
   
 </span>
 
@@ -211,7 +260,7 @@
         
           <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://honjo2.github.io/blog/2013/11/27/colomboburry/" data-via="honjo2" data-counturl="http://honjo2.github.io/blog/2013/11/27/colomboburry/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://honjo2.github.io/blog/2014/02/02/starting-go/" data-via="honjo2" data-counturl="http://honjo2.github.io/blog/2014/02/02/starting-go/" >Tweet</a>
   
   
   
@@ -221,10 +270,8 @@
         
           <ul class="meta text-muted pager">
             
-            <li class="previous"><a href="/blog/2013/11/19/streetview/" title="Previous Post: iOS版マピオンからストリートビューを開く">&laquo; iOS版マピオンからストリートビューを開く</a></li>
+            <li class="previous"><a href="/blog/2014/02/01/weekend/" title="Previous Post: 僕の休日">&laquo; 僕の休日</a></li>
             
-            
-            <li class="next"><a href="/blog/2013/12/02/webmerc/" title="Next Post: Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました &raquo;</a></li>
             
           </ul>
         
@@ -266,7 +313,7 @@
   
   <div id="recent_posts" class="list-group">
     
-    <a class="list-group-item " href="/blog/2014/02/02/starting-go/">Go事始め</a>
+    <a class="list-group-item active" href="/blog/2014/02/02/starting-go/">Go事始め</a>
     
     <a class="list-group-item " href="/blog/2014/02/01/weekend/">僕の休日</a>
     
@@ -322,8 +369,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://honjo2.github.io/blog/2013/11/27/colomboburry/';
-        var disqus_url = 'http://honjo2.github.io/blog/2013/11/27/colomboburry/';
+        var disqus_identifier = 'http://honjo2.github.io/blog/2014/02/02/starting-go/';
+        var disqus_url = 'http://honjo2.github.io/blog/2014/02/02/starting-go/';
         var disqus_script = 'embed.js';
       
     (function () {
