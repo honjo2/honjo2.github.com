@@ -122,9 +122,11 @@
 
   <div class="entry-content clearfix"><h1>GVM（バージョン管理）インストール</h1>
 
-<p><code>bash &lt; &lt;(curl -s https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer)</code></p>
+<ul>
+<li><code>bash &lt; &lt;(curl -s https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer)</code></li>
+<li>.zshrc（.bashrc）に以下追記</li>
+</ul>
 
-<h1>.zshrc（.bashrc）に以下追記</h1>
 
 <figure class='code'><figcaption><span>.zshrc</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -133,31 +135,49 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h1>インストール可能なバージョンを確認</h1>
-
-<p><code>gvm listall</code></p>
+<hr />
 
 <h1>Goインストール</h1>
 
-<p><code>go install go1.2</code></p>
+<h3>インストール可能なバージョンを確認</h3>
 
-<h1>インストールされているバージョンを確認</h1>
+<ul>
+<li><code>gvm listall</code></li>
+</ul>
 
-<p><code>gvm list</code></p>
 
-<h1>使いたいGoのバージョンを指定</h1>
+<h3>インストール</h3>
 
-<p><code>gvm use go1.2</code></p>
+<ul>
+<li><code>gvm install go1.2</code></li>
+</ul>
 
-<blockquote><p>常にこのバージョンを使いたい場合はこれを.zshrc（.bashrc）に追記しておく</p></blockquote>
 
-<h1>GoSublime（Sublime Text用プラグイン）インストール</h1>
+<h3>インストールされているバージョンを確認</h3>
 
-<ol>
-<li>Sublime Text 3を開き、Cmd+pで<code>Package Control: Install Package</code>と入力しエンター</li>
+<ul>
+<li><code>gvm list</code></li>
+</ul>
+
+
+<h3>使いたいGoのバージョンを指定</h3>
+
+<ul>
+<li><code>gvm use go1.2</code>
+
+<blockquote><p>常にこのバージョンを使いたい場合はこれを.zshrc（.bashrc）に追記しておく</p></blockquote></li>
+</ul>
+
+
+<hr />
+
+<h1>GoSublime（Sublime Textプラグイン）インストール</h1>
+
+<ul>
+<li>Sublime Textを開き、Cmd+pで<code>Package Control: Install Package</code>と入力しエンター</li>
 <li>さらに<code>gosublime</code>と入力しエンター</li>
 <li><code>Preferences -&gt; Package Settings -&gt; GoSublimge -&gt; Settings – User</code>に以下入力</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span>GoSublime.sublime-settings</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -183,9 +203,21 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<blockquote><p>GVMが$GOPATHを設定してくれているのでecho <code>$GOPATH</code>で確認できる</p></blockquote>
+<blockquote><p>GVMが$GOPATHを設定してくれているので<code>echo $GOPATH</code>で確認できる</p></blockquote>
 
-<h1>サンプルコード作成</h1>
+<ul>
+<li>Sublime Textを再起動</li>
+</ul>
+
+
+<hr />
+
+<h1>サンプル作成</h1>
+
+<ul>
+<li>Sublime Textで以下入力</li>
+</ul>
+
 
 <figure class='code'><figcaption><span>main.go</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -208,13 +240,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h1>Sublime Text上で実行</h1>
-
-<ol>
+<ul>
 <li>Cmd+9でコマンドシェルを開く</li>
 <li>cdコマンドでカレントに移動</li>
 <li><code>run main.go</code>で実行</li>
-</ol>
+</ul>
 
 </div>
   
@@ -572,30 +602,32 @@
 - ターメリック 小さじ1/2 ...1
 - はちみつ 小さじ1 ...1
 - 塩 小さじ1 ...1
-- レピス・エピスのコロンボ 小さじ5 ...2
-- バター 50g ...3
-- 玉ねぎ 中2個 ...3
-- にんにく 2片 ...3
-- しょうが 1片 ...3
-- ホールトマト 1缶 ...5
-- 砂糖 小さじ1 ...6
-- 塩 小さじ 1/2 ...6
-- ココナッツミルク 300ml ...7
-- ピーナッツバター 小さじ1 ...7
-- 塩 少々 ...8
-- こしょう 少々 ...8
-- パクチー 1束 ...9
+- レピス・エピスのコロンボ 小さじ3.5 ...2
+- チリーペッパー 小さじ1/2 ...2
+- クミンシード 小さじ1/2 ...3
+- バター 50g ...4
+- 玉ねぎ 中2個 ...4
+- にんにく 2片 ...4
+- しょうが 1片 ...4
+- トマト 3個 ...6
+- 砂糖 小さじ1 ...7
+- 塩 小さじ 1/2 ...7
+- 生クリーム 200ml ...8
+- 塩 少々 ...9
+- こしょう 少々 ...9
+- パクチー 1束 ...10
 
 # 手順
 1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
-2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
-3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
-4. 2のスパイスを加え軽く炒める
-5. ホールトマトを加え中火で5分煮込む
-6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
-7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
-8. 塩、こしょうで味を整える
-9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+2. スパイスブティック レピス・エピスのコロンボとチリーペッパーを用意する
+3. 鍋にクミンシードを入れ香りが出るまで炒める
+4. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
+5. 2のスパイスを加え軽く炒める
+6. 湯がいて皮を剥いたトマトをざく切りにし鍋に加え中火で5分煮込む
+7. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
+8. 生クリームを加え弱火で5分煮込む
+9. 塩、こしょうで味を整える
+10. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
 
 </div>
   
