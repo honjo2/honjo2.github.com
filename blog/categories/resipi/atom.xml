@@ -4,7 +4,7 @@
   <title><![CDATA[Category: レシピ | honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/blog/categories/resipi/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-08-07T12:29:15+09:00</updated>
+  <updated>2014-08-07T16:36:19+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[バターチキンカレーのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2014/08/07/butterchickencurry/"/>
+    <updated>2014-08-07T16:08:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/08/07/butterchickencurry</id>
+    <content type="html"><![CDATA[<p>バターチキンカレーのレシピです。</p>
+
+<p>やっぱりホールスパイスを使うと断然美味しいです。</p>
+
+<p><img src="/images/2014-08-07/butterchickencurry.jpg" alt="" /></p>
+
+<script src="https://gist.github.com/honjo2/261c1b731caf1731ff61.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[コロンボカレーのレシピ]]></title>
