@@ -4,7 +4,7 @@
   <title><![CDATA[Category: レシピ | honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/blog/categories/resipi/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-08-07T16:45:35+09:00</updated>
+  <updated>2014-08-09T20:58:03+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[グリーンカレーのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2014/08/09/greencurry/"/>
+    <updated>2014-08-09T20:49:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/08/09/greencurry</id>
+    <content type="html"><![CDATA[<p>グリーンカレーのレシピです。</p>
+
+<p>定番ですね。</p>
+
+<p><img src="/images/2014-08-09/greencurry.jpg" alt="" /></p>
+
+<script src="https://gist.github.com/honjo2/3d486565278397c99a8a.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[バターチキンカレーのレシピ]]></title>
