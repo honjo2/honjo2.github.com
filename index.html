@@ -107,6 +107,51 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-13T12:57:00+09:00" pubdate data-updated="true">Aug 13<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/08/13/khaomankai/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2014/08/13/khaomankai/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/13/khaomankai/">カオマンガイのレシピ</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>カオマンガイのレシピです。</p>
+
+<p><img src="/images/2014-08-13/khaomankai.jpg" alt="" /></p>
+
+<script src="https://gist.github.com/honjo2/82d4b030fce6cc37329f.js"></script>
+
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-08-09T20:49:00+09:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time>
         
            | <a href="/blog/2014/08/09/greencurry/#disqus_thread"
@@ -696,30 +741,32 @@
 - ターメリック 小さじ1/2 ...1
 - はちみつ 小さじ1 ...1
 - 塩 小さじ1 ...1
-- レピス・エピスのコロンボ 小さじ5 ...2
-- バター 50g ...3
-- 玉ねぎ 中2個 ...3
-- にんにく 2片 ...3
-- しょうが 1片 ...3
-- ホールトマト 1缶 ...5
-- 砂糖 小さじ1 ...6
-- 塩 小さじ 1/2 ...6
-- ココナッツミルク 300ml ...7
-- ピーナッツバター 小さじ1 ...7
-- 塩 少々 ...8
-- こしょう 少々 ...8
-- パクチー 1束 ...9
+- レピス・エピスのコロンボ 小さじ3.5 ...2
+- チリーペッパー 小さじ1/2 ...2
+- クミンシード 小さじ1/2 ...3
+- バター 50g ...4
+- 玉ねぎ 中2個 ...4
+- にんにく 2片 ...4
+- しょうが 1片 ...4
+- トマト 3個 ...6
+- 砂糖 小さじ1 ...7
+- 塩 小さじ 1/2 ...7
+- 生クリーム 200ml ...8
+- 塩 少々 ...9
+- こしょう 少々 ...9
+- パクチー 1束 ...10
 
 # 手順
 1. 1口大に切った鶏むね肉、ヨーグルト、ターメリック、はちみつ、塩を混ぜ30分から一晩漬け込む
-2. スパイスブティック レピス・エピスのコロンボ小さじ5を用意する
-3. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
-4. 2のスパイスを加え軽く炒める
-5. ホールトマトを加え中火で5分煮込む
-6. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
-7. ココナッツミルク、ピーナッツバターを加え弱火で5分煮込む
-8. 塩、こしょうで味を整える
-9. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
+2. スパイスブティック レピス・エピスのコロンボとチリーペッパーを用意する
+3. 鍋にクミンシードを入れ香りが出るまで炒める
+4. 鍋にバター、みじん切りの玉ねぎ、にんにく、しょうがを入れよく炒める
+5. 2のスパイスを加え軽く炒める
+6. 湯がいて皮を剥いたトマトをざく切りにし鍋に加え中火で5分煮込む
+7. 1の鶏むね肉と砂糖、塩を加え弱火〜中火で10分煮込む
+8. 生クリームを加え弱火で5分煮込む
+9. 塩、こしょうで味を整える
+10. お皿に盛りつけパクチーを添えて完成</code></pre></noscript></div>
 
 </div>
   
@@ -782,83 +829,6 @@
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-06T21:00:00+09:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/11/06/log/#disqus_thread"
-             data-disqus-identifier="http://honjo2.github.io/blog/2013/11/06/log/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/06/log/">AndroidのLogクラスのシンプルなラッパークラス</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><p>Androidでログを出力するには<code>Log.d("MainActivity", "ログ");</code>という風に書くと思います。第一引数はタグですがここはクラス名とかを書いておいて第二引数にログを書く感じだと思います。でも毎回、引数を２つも書くの面倒ですよね。どうせなら第二引数のログだけにしたいです。タグはそのクラス名が自動で入れば嬉しいです。そこで作りました。第一引数にログを書くだけです。<code>Log.d("ログ");</code>こんな風に。タグは自動でそれが書かれたクラス名が入ります。これはAndroid開発で個人的に使っていてかなり重宝しています。</p>
-
-<div><script src='https://gist.github.com/5696369.js'></script>
-<noscript><pre><code>public class Log {
-
-    public static void d(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.d(e.getClassName(), msg);
-    }
-    
-    public static void e(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.e(e.getClassName(), msg);
-    }
-    
-    public static void i(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.i(e.getClassName(), msg);
-    }
-    
-    public static void v(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.v(e.getClassName(), msg);
-    }
-    
-    public static void w(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.w(e.getClassName(), msg);
-    }
-    
-    public static void wtf(String msg) {
-        StackTraceElement e = new Exception().getStackTrace()[1];
-        android.util.Log.wtf(e.getClassName(), msg);
-    }
-}</code></pre></noscript></div>
-
-
-
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -899,6 +869,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2014/08/13/khaomankai/">カオマンガイのレシピ</a>
+    
     <a class="list-group-item " href="/blog/2014/08/09/greencurry/">グリーンカレーのレシピ</a>
     
     <a class="list-group-item " href="/blog/2014/08/07/butterchickencurry/">バターチキンカレーのレシピ</a>
@@ -907,8 +879,6 @@
     
     <a class="list-group-item " href="/blog/2014/02/01/weekend/">僕の休日</a>
     
-    <a class="list-group-item " href="/blog/2013/12/12/tmr02/">BMCのTMR02を購入しました</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
@@ -916,7 +886,7 @@
     <h3 class="panel-title">カテゴリ</h3>
   </div>
     <div class="list-group">
-      <a class='list-group-item' href='/blog/categories/android/'>Android (2)</a><a class='list-group-item' href='/blog/categories/bmc/'>BMC (1)</a><a class='list-group-item' href='/blog/categories/emberfire/'>EmberFire (1)</a><a class='list-group-item' href='/blog/categories/emberjs/'>EmberJS (1)</a><a class='list-group-item' href='/blog/categories/firebase/'>Firebase (1)</a><a class='list-group-item' href='/blog/categories/go/'>Go (1)</a><a class='list-group-item' href='/blog/categories/ios/'>iOS (2)</a><a class='list-group-item' href='/blog/categories/iphone/'>iPhone (1)</a><a class='list-group-item' href='/blog/categories/node-dot-js/'>Node.js (1)</a><a class='list-group-item' href='/blog/categories/npm/'>npm (1)</a><a class='list-group-item' href='/blog/categories/openstreetmap/'>OpenStreetMap (1)</a><a class='list-group-item' href='/blog/categories/tmr02/'>TMR02 (1)</a><a class='list-group-item' href='/blog/categories/webmerc/'>webmerc (1)</a><a class='list-group-item' href='/blog/categories/xcode/'>Xcode (1)</a><a class='list-group-item' href='/blog/categories/sutoritobiyu/'>ストリートビュー (1)</a><a class='list-group-item' href='/blog/categories/butukumakuretuto/'>ブックマークレット (1)</a><a class='list-group-item' href='/blog/categories/mapion/'>マピオン (2)</a><a class='list-group-item' href='/blog/categories/raihusutairu/'>ライフスタイル (2)</a><a class='list-group-item' href='/blog/categories/resipi/'>レシピ (4)</a><a class='list-group-item' href='/blog/categories/rodobaiku/'>ロードバイク (1)</a><a class='list-group-item' href='/blog/categories/di-li-yuan-di-tu/'>地理院地図 (1)</a>
+      <a class='list-group-item' href='/blog/categories/android/'>Android (2)</a><a class='list-group-item' href='/blog/categories/bmc/'>BMC (1)</a><a class='list-group-item' href='/blog/categories/emberfire/'>EmberFire (1)</a><a class='list-group-item' href='/blog/categories/emberjs/'>EmberJS (1)</a><a class='list-group-item' href='/blog/categories/firebase/'>Firebase (1)</a><a class='list-group-item' href='/blog/categories/go/'>Go (1)</a><a class='list-group-item' href='/blog/categories/ios/'>iOS (2)</a><a class='list-group-item' href='/blog/categories/iphone/'>iPhone (1)</a><a class='list-group-item' href='/blog/categories/node-dot-js/'>Node.js (1)</a><a class='list-group-item' href='/blog/categories/npm/'>npm (1)</a><a class='list-group-item' href='/blog/categories/openstreetmap/'>OpenStreetMap (1)</a><a class='list-group-item' href='/blog/categories/tmr02/'>TMR02 (1)</a><a class='list-group-item' href='/blog/categories/webmerc/'>webmerc (1)</a><a class='list-group-item' href='/blog/categories/xcode/'>Xcode (1)</a><a class='list-group-item' href='/blog/categories/sutoritobiyu/'>ストリートビュー (1)</a><a class='list-group-item' href='/blog/categories/butukumakuretuto/'>ブックマークレット (1)</a><a class='list-group-item' href='/blog/categories/mapion/'>マピオン (2)</a><a class='list-group-item' href='/blog/categories/raihusutairu/'>ライフスタイル (2)</a><a class='list-group-item' href='/blog/categories/resipi/'>レシピ (5)</a><a class='list-group-item' href='/blog/categories/rodobaiku/'>ロードバイク (1)</a><a class='list-group-item' href='/blog/categories/di-li-yuan-di-tu/'>地理院地図 (1)</a>
     </div>
 </section>
 
