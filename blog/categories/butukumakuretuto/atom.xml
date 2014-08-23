@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ブックマークレット | honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/blog/categories/butukumakuretuto/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-08-13T13:00:28+09:00</updated>
+  <updated>2014-08-23T23:18:53+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Googleマップの検索ボックスを削除するブックマークレット]]></title>
+    <link href="http://honjo2.github.io/blog/2014/08/23/delete-googlemaps-searchbox-bookmarklet/"/>
+    <updated>2014-08-23T23:14:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/08/23/delete-googlemaps-searchbox-bookmarklet</id>
+    <content type="html"><![CDATA[<p><a href="http://wakarukoto.com/?p=9306">新しいGoogleマップに不満だらけだから元に戻す方法</a>にある通り今のGoogleマップは検索ボックスが超邪魔です。
+なのでこれを削除するブックマークレットを作りました。
+<a href="https://github.com/honjo2/DeleteGoogleMapsSearchBoxBookmarklet">https://github.com/honjo2/DeleteGoogleMapsSearchBoxBookmarklet</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[地理院地図が正式公開されたので地図をOpenStreetMapに変更するブックマークレット作りました]]></title>
