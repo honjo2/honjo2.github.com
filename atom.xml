@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-09-23T00:48:00+09:00</updated>
+  <updated>2014-10-24T00:28:47+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[パクチー餃子のレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2014/10/24/pakuchigyouza/"/>
+    <updated>2014-10-24T00:26:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/10/24/pakuchigyouza</id>
+    <content type="html"><![CDATA[<p>パクチー餃子のレシピです。</p>
+
+<p><img src="http://honjo2.github.io/images/2014-10-24/pakuchigyouza.jpg" alt="" /></p>
+
+<script src="https://gist.github.com/honjo2/481f8b29cc2e16009c74.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iPhone 6 デカすぎぃぃぃ]]></title>

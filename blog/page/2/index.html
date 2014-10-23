@@ -107,6 +107,99 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-12-02T22:27:00+09:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2013</time>
+        
+           | <a href="/blog/2013/12/02/webmerc/#disqus_thread"
+             data-disqus-identifier="http://honjo2.github.io/blog/2013/12/02/webmerc/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/blog/2013/12/02/webmerc/">Webメルカトル関係のコマンドラインツールをNode.jsで作ってみました</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Webメルカトルに纏わる情報を求めるコマンドラインツールが欲しくなったので作りました。</p>
+
+<p><code>npm install webmerc -g</code> でインストールできます。</p>
+
+<p>npmページは<a href="https://npmjs.org/package/webmerc">ここ</a></p>
+
+<p>例えばこんなことができます。</p>
+
+<figure class='code'><figcaption><span>緯度経度からピクセルを求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --c2p 35.7,139.7,15
+</span><span class='line'><span class="o">{</span> x: 7449549.938230911, y: 3302710.99871282 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>ピクセルから緯度経度を求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --p2c 7449549.938230911,3302710.99871282,15
+</span><span class='line'><span class="o">{</span> latitude: 139.70000000000002, longitude: 35.70000000000002 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>緯度経度をメートルに変換</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -m 35.7,139.7
+</span><span class='line'><span class="o">{</span> x: 15551332.863820316, y: 4259419.96554792 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>メートルを緯度経度に変換</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc -g 15551332.863820316,4259419.96554792
+</span><span class='line'><span class="o">{</span> latitude: 139.7, longitude: 35.70000000000002 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>緯度経度からタイルインデックスを求める</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>% webmerc --tileindex 35.7,139.7,15
+</span><span class='line'>15/29099/12901
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ソースは<a href="https://github.com/honjo2/webmerc">ここ</a></p>
+
+<p>ちなみに、proj4は高機能ですが使いにくいし、Webメルカトル以外は使わないんですよね。</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2013-11-27T21:59:00+09:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
         
            | <a href="/blog/2013/11/27/colomboburry/#disqus_thread"
@@ -1034,6 +1127,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2014/10/24/pakuchigyouza/">パクチー餃子のレシピ</a>
+    
     <a class="list-group-item " href="/blog/2014/09/23/iphone6/">iPhone 6 デカすぎぃぃぃ</a>
     
     <a class="list-group-item " href="/blog/2014/08/23/delete-googlemaps-searchbox-bookmarklet/">Googleマップの検索ボックスを削除するブックマークレット</a>
@@ -1042,8 +1137,6 @@
     
     <a class="list-group-item " href="/blog/2014/08/09/greencurry/">グリーンカレーのレシピ</a>
     
-    <a class="list-group-item " href="/blog/2014/08/07/butterchickencurry/">バターチキンカレーのレシピ</a>
-    
   </div>
 </section>
 <section class="panel panel-default">
@@ -1051,7 +1144,7 @@
     <h3 class="panel-title">カテゴリ</h3>
   </div>
     <div class="list-group">
-      <a class='list-group-item' href='/blog/categories/android/'>Android (2)</a><a class='list-group-item' href='/blog/categories/bmc/'>BMC (1)</a><a class='list-group-item' href='/blog/categories/emberfire/'>EmberFire (1)</a><a class='list-group-item' href='/blog/categories/emberjs/'>EmberJS (1)</a><a class='list-group-item' href='/blog/categories/firebase/'>Firebase (1)</a><a class='list-group-item' href='/blog/categories/go/'>Go (1)</a><a class='list-group-item' href='/blog/categories/googlematupu/'>Googleマップ (1)</a><a class='list-group-item' href='/blog/categories/ios/'>iOS (2)</a><a class='list-group-item' href='/blog/categories/iphone/'>iPhone (2)</a><a class='list-group-item' href='/blog/categories/node-dot-js/'>Node.js (1)</a><a class='list-group-item' href='/blog/categories/npm/'>npm (1)</a><a class='list-group-item' href='/blog/categories/openstreetmap/'>OpenStreetMap (1)</a><a class='list-group-item' href='/blog/categories/tmr02/'>TMR02 (1)</a><a class='list-group-item' href='/blog/categories/webmerc/'>webmerc (1)</a><a class='list-group-item' href='/blog/categories/xcode/'>Xcode (1)</a><a class='list-group-item' href='/blog/categories/sutoritobiyu/'>ストリートビュー (1)</a><a class='list-group-item' href='/blog/categories/butukumakuretuto/'>ブックマークレット (2)</a><a class='list-group-item' href='/blog/categories/mapion/'>マピオン (2)</a><a class='list-group-item' href='/blog/categories/raihusutairu/'>ライフスタイル (2)</a><a class='list-group-item' href='/blog/categories/resipi/'>レシピ (5)</a><a class='list-group-item' href='/blog/categories/rodobaiku/'>ロードバイク (1)</a><a class='list-group-item' href='/blog/categories/di-li-yuan-di-tu/'>地理院地図 (1)</a>
+      <a class='list-group-item' href='/blog/categories/android/'>Android (2)</a><a class='list-group-item' href='/blog/categories/bmc/'>BMC (1)</a><a class='list-group-item' href='/blog/categories/emberfire/'>EmberFire (1)</a><a class='list-group-item' href='/blog/categories/emberjs/'>EmberJS (1)</a><a class='list-group-item' href='/blog/categories/firebase/'>Firebase (1)</a><a class='list-group-item' href='/blog/categories/go/'>Go (1)</a><a class='list-group-item' href='/blog/categories/googlematupu/'>Googleマップ (1)</a><a class='list-group-item' href='/blog/categories/ios/'>iOS (2)</a><a class='list-group-item' href='/blog/categories/iphone/'>iPhone (2)</a><a class='list-group-item' href='/blog/categories/node-dot-js/'>Node.js (1)</a><a class='list-group-item' href='/blog/categories/npm/'>npm (1)</a><a class='list-group-item' href='/blog/categories/openstreetmap/'>OpenStreetMap (1)</a><a class='list-group-item' href='/blog/categories/tmr02/'>TMR02 (1)</a><a class='list-group-item' href='/blog/categories/webmerc/'>webmerc (1)</a><a class='list-group-item' href='/blog/categories/xcode/'>Xcode (1)</a><a class='list-group-item' href='/blog/categories/sutoritobiyu/'>ストリートビュー (1)</a><a class='list-group-item' href='/blog/categories/butukumakuretuto/'>ブックマークレット (2)</a><a class='list-group-item' href='/blog/categories/mapion/'>マピオン (2)</a><a class='list-group-item' href='/blog/categories/raihusutairu/'>ライフスタイル (2)</a><a class='list-group-item' href='/blog/categories/resipi/'>レシピ (6)</a><a class='list-group-item' href='/blog/categories/rodobaiku/'>ロードバイク (1)</a><a class='list-group-item' href='/blog/categories/di-li-yuan-di-tu/'>地理院地図 (1)</a>
     </div>
 </section>
 
