@@ -4,7 +4,7 @@
   <title><![CDATA[honjo2のブログ]]></title>
   <link href="http://honjo2.github.io/atom.xml" rel="self"/>
   <link href="http://honjo2.github.io/"/>
-  <updated>2014-10-24T00:28:47+09:00</updated>
+  <updated>2014-10-31T23:41:46+09:00</updated>
   <id>http://honjo2.github.io/</id>
   <author>
     <name><![CDATA[honjo2]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ボルシチのレシピ]]></title>
+    <link href="http://honjo2.github.io/blog/2014/10/31/borsch/"/>
+    <updated>2014-10-31T22:51:00+09:00</updated>
+    <id>http://honjo2.github.io/blog/2014/10/31/borsch</id>
+    <content type="html"><![CDATA[<p>ボルシチのレシピです。</p>
+
+<p><img src="http://honjo2.github.io/images/2014-10-31/borsch.jpg" alt="" /></p>
+
+<script src="https://gist.github.com/honjo2/c1db94e92921c15cf4ad.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[パクチー餃子のレシピ]]></title>
@@ -817,239 +831,6 @@ iPhone5sならまだ売ってるし、誰か僕の6と交換してもらえな�
 
 
 <p><img src="http://honjo2.github.io/images/2013-10-24/tomorrownight.png" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[EmberFireが出た]]></title>
-    <link href="http://honjo2.github.io/blog/2013/10/23/emberfire/"/>
-    <updated>2013-10-23T13:09:00+09:00</updated>
-    <id>http://honjo2.github.io/blog/2013/10/23/emberfire</id>
-    <content type="html"><![CDATA[<h1>EmberFireとは？</h1>
-
-<ul>
-<li>FirebaseをEmberJSで使えるようにするためのライブラリです。</li>
-<li><a href="https://www.firebase.com/blog/2013-10-22-firebase-bindings-for-ember.html">Announcing Firebase Bindings for EmberJS</a></li>
-</ul>
-
-
-<h1>サンプルを動かす</h1>
-
-<ol>
-<li><code>git clone https://github.com/firebase/emberFire.git</code></li>
-<li><code>cd emberFire</code></li>
-<li><p><code>open examples/chat/index.html</code></p>
-
-<p> <img src="http://honjo2.github.io/images/2013-10-23/emberfirechat.png" alt="" /></p></li>
-</ol>
-
-
-<h1>ソース</h1>
-
-<figure class='code'><figcaption><span>index.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'><span class="nt">&lt;head&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;title&gt;</span>EmberFire Test chat<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;https://www.firebase.com/css/example.css&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;style&gt;</span>
-</span><span class='line'>    <span class="nt">button</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">15</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>      <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nf">#nameInput</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="nf">#messageInput</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">width</span><span class="o">:</span> <span class="m">60</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="nt">&lt;/style&gt;</span>
-</span><span class='line'><span class="nt">&lt;/head&gt;</span>
-</span><span class='line'><span class="nt">&lt;body&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">EmberFire</span> <span class="nx">Chat</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="nx">outlet</span><span class="err">｝｝</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- データを全て表示 --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span> <span class="na">data-template-name=</span><span class="s">&quot;index&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="err">｛｛#</span><span class="nx">scrolling</span><span class="o">-</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;messagesDiv&quot;</span> <span class="nx">update</span><span class="o">-</span><span class="nx">when</span><span class="o">=</span><span class="k">this</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="err">｛｛#</span><span class="nx">each</span><span class="err">｝｝</span>
-</span><span class='line'>        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;&lt;</span><span class="nx">em</span><span class="o">&gt;</span><span class="err">｛｛</span><span class="nx">from</span><span class="err">｝｝</span><span class="o">&lt;</span><span class="err">/em&gt;: ｛｛msg｝｝&lt;/div&gt;</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="o">/</span><span class="nx">each</span><span class="err">｝｝</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="o">/</span><span class="nx">scrolling</span><span class="o">-</span><span class="nx">div</span><span class="err">｝｝</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">form</span> <span class="err">｛｛</span><span class="nx">action</span> <span class="s2">&quot;sendMessage&quot;</span> <span class="nx">on</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="err">｝｝</span><span class="o">&gt;</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;nameInput&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="nx">from</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Name&quot;</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="err">｛｛</span><span class="nx">input</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;messageInput&quot;</span> <span class="nx">value</span><span class="o">=</span><span class="nx">msg</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Message...&quot;</span><span class="err">｝｝</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="nx">submit</span><span class="o">&gt;</span><span class="nx">Send</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="err">/form&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-handlebars&quot;</span> <span class="na">id=</span><span class="s">&quot;components/scrolling-div&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="err">｛｛</span><span class="nx">yield</span><span class="err">｝｝</span>
-</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- FireEmberに必要なjs --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdn.firebase.com/v0/firebase.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="c">&lt;!--&lt;script src=&quot;http://builds.emberjs.com/tags/v1.0.0/ember.js&quot;&gt;&lt;/script&gt;--&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://builds.emberjs.com/ember-latest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;../../emberfire-latest.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c">&lt;!-- このアプリ用のjs --&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>app.js</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">App</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Application</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// 使用するFirebaseを指定</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">IndexRoute</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">model</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">EmberFire</span><span class="p">.</span><span class="nb">Array</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
-</span><span class='line'>      <span class="nx">ref</span><span class="o">:</span> <span class="k">new</span> <span class="nx">Firebase</span><span class="p">(</span><span class="s2">&quot;https://ember-chat.firebaseio-demo.com/&quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// データを保存</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">IndexController</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">ArrayController</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">from</span><span class="o">:</span> <span class="s2">&quot;Guest&quot;</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span>
-</span><span class='line'>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">sendMessage</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">pushObject</span><span class="p">({</span><span class="nx">from</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;from&quot;</span><span class="p">),</span> <span class="nx">msg</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;msg&quot;</span><span class="p">)});</span>
-</span><span class='line'>      <span class="k">this</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;msg&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// HTMLを見やすく</span>
-</span><span class='line'><span class="nx">App</span><span class="p">.</span><span class="nx">ScrollingDivComponent</span> <span class="o">=</span> <span class="nx">Ember</span><span class="p">.</span><span class="nx">Component</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">scheduleScrollIntoView</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Only run once per tick, once rendering has completed;</span>
-</span><span class='line'>    <span class="c1">// avoid flood of scrolls when many updates happen at once</span>
-</span><span class='line'>    <span class="nx">Ember</span><span class="p">.</span><span class="nx">run</span><span class="p">.</span><span class="nx">scheduleOnce</span><span class="p">(</span><span class="s2">&quot;afterRender&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="s2">&quot;scrollIntoView&quot;</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}.</span><span class="nx">observes</span><span class="p">(</span><span class="s2">&quot;update-when.@each&quot;</span><span class="p">),</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">scrollIntoView</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">().</span><span class="nx">scrollTop</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$</span><span class="p">().</span><span class="nx">prop</span><span class="p">(</span><span class="s2">&quot;scrollHeight&quot;</span><span class="p">));</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>データ</h1>
-
-<ul>
-<li><p>データはこんな感じで保存されています</p>
-
-<p>  <img src="http://honjo2.github.io/images/2013-10-23/firebasedata.png" alt="" /></p></li>
-<li><p>ちなみにこれはデモ用のデータベースなので誰でも見ることができます</p>
-
-<ul>
-<li><a href="https://ember-chat.firebaseio-demo.com/">https://ember-chat.firebaseio-demo.com/</a></li>
-</ul>
-</li>
-</ul>
-
 ]]></content>
   </entry>
   
